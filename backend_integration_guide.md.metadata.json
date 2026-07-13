@@ -1,0 +1,5 @@
+{
+  "summary":  "A comprehensive guide on integrating the Node.js/Express backend with Google Drive API. It details the setup process for Google Cloud Service Accounts, folder permissions, proxying and streaming images to avoid CORS/access issues, and updating the frontend dynamically.",
+  "updatedAt":  "2026-07-13T16:42:45.843753900Z",
+  "userFacing":  true
+}

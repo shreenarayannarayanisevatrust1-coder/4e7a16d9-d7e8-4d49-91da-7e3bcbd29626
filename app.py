@@ -15,22 +15,37 @@ st.set_page_config(
 # Hide Streamlit header, footer and padding for a clean full-screen look
 hide_st_style = """
             <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            .block-container {
-                padding-top: 0rem;
-                padding-bottom: 0rem;
-                padding-left: 0rem;
-                padding-right: 0rem;
+            /* Hide Streamlit components completely so they don't block clicks */
+            #MainMenu {display: none !important;}
+            footer {display: none !important;}
+            header {display: none !important;}
+            [data-testid="stHeader"] {display: none !important;}
+            [data-testid="stToolbar"] {display: none !important;}
+            
+            /* Remove margins and padding from Streamlit main container */
+            .stApp {
+                margin: 0 !important;
+                padding: 0 !important;
             }
+            .block-container {
+                padding-top: 0rem !important;
+                padding-bottom: 0rem !important;
+                padding-left: 0rem !important;
+                padding-right: 0rem !important;
+                max-width: 100% !important;
+            }
+            
+            /* Make the iframe fill the viewport and scroll properly */
             iframe {
-                border: none;
+                border: none !important;
                 width: 100% !important;
                 height: 100vh !important;
+                display: block;
             }
+            
+            /* Hide parent page scrollbar to avoid double scrollbars */
             body {
-                overflow: hidden;
+                overflow: hidden !important;
             }
             </style>
             """

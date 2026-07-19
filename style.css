@@ -273,36 +273,22 @@ h1, h2, h3, h4, .brand, .cursive-font {
   background-size: cover;
   background-position: center;
   opacity: 0;
-  animation: fade-carousel 16s infinite ease-in-out;
+  transition: opacity 1.5s ease-in-out, transform 4.5s ease-in-out;
   transform: scale(1.05);
+  z-index: 1;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  transform: scale(1.01);
+  z-index: 2;
 }
 
 .carousel-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right, rgba(255, 240, 243, 0.9) 0%, rgba(255, 245, 247, 0.75) 50%, rgba(255, 227, 232, 0.4) 100%);
-  z-index: 2;
-}
-
-@keyframes fade-carousel {
-  0% {
-    opacity: 0;
-    transform: scale(1.05);
-  }
-  4% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-    transform: scale(1.01);
-  }
-  29% {
-    opacity: 0;
-    transform: scale(1.0);
-  }
-  100% {
-    opacity: 0;
-  }
+  z-index: 3;
 }
 
 /* Ambient glow nodes in background */

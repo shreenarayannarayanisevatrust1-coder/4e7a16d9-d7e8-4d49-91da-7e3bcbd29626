@@ -1421,7 +1421,7 @@ h1, h2, h3, h4, .brand, .cursive-font {
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--light-orange);
+  color: var(--maroon);
   margin-bottom: 0.8rem;
   display: inline-block;
   font-weight: 700;
@@ -1431,7 +1431,7 @@ h1, h2, h3, h4, .brand, .cursive-font {
   font-size: 2.2rem;
   color: var(--text);
   margin-bottom: 0.8rem;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  text-shadow: none;
 }
 
 .dev-btn p {
@@ -1442,8 +1442,8 @@ h1, h2, h3, h4, .brand, .cursive-font {
 
 .dev-btn:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 183, 77, 0.45);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 25px rgba(230, 81, 0, 0.2);
+  border-color: rgba(128, 12, 37, 0.3);
+  box-shadow: 0 30px 60px rgba(128, 12, 37, 0.1), 0 0 25px rgba(230, 81, 0, 0.05);
 }
 
 .dev-btn:hover::before {
@@ -5288,5 +5288,77 @@ h1, h2, h3, h4, .brand, .cursive-font {
   }
   .members-closing-divider .closing-line {
     width: 60px;
+  }
+}
+
+/* Wave Loading Text Animation */
+.wave-loading-text {
+  position: relative;
+  display: inline-block;
+  color: rgba(128, 12, 37, 0.18);
+  -webkit-text-stroke: 0.5px rgba(128, 12, 37, 0.2);
+  white-space: nowrap;
+}
+
+.wave-loading-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #800c25 0%,
+    #e65100 25%,
+    #ffb74d 50%,
+    #e65100 75%,
+    #800c25 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: wave-loading-anim 4s ease-in-out infinite, shimmer-anim 8s linear infinite;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@keyframes wave-loading-anim {
+  0%, 100% {
+    clip-path: polygon(
+      0% 46%, 
+      15% 42%, 
+      30% 46%, 
+      45% 52%, 
+      60% 48%, 
+      75% 42%, 
+      90% 46%, 
+      100% 50%, 
+      100% 100%, 
+      0% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0% 54%, 
+      15% 58%, 
+      30% 54%, 
+      45% 48%, 
+      60% 52%, 
+      75% 58%, 
+      90% 54%, 
+      100% 50%, 
+      100% 100%, 
+      0% 100%
+    );
+  }
+}
+
+@keyframes shimmer-anim {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
   }
 }

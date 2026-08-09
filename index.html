@@ -21,7 +21,7 @@
     <header class="topbar">
       <div class="topbar-inner">
         <a class="brand" href="#home">
-          <img class="brand-logo" src="images/logo.jpeg" alt="Logo" /> श्री नारायण नारायणी सेवा ट्रस्ट
+          <img class="brand-logo" src="images/logo.jpeg" alt="Logo" /> <span class="wave-loading-text" data-text="श्री नारायण नारायणी सेवा ट्रस्ट">श्री नारायण नारायणी सेवा ट्रस्ट</span>
         </a>
         <nav class="nav-links" aria-label="मुख्य नेविगेशन">
           <a href="#home">मुख्य पृष्ठ</a>
@@ -2274,5 +2274,60 @@
       <button class="close-btn" onclick="document.getElementById('floatingVideo').style.display='none'">×</button>
       <iframe src="https://www.youtube.com/embed/E7d_vtRrsYg?autoplay=1&mute=1&loop=1&playlist=E7d_vtRrsYg&controls=1&modestbranding=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
+
+    <!-- Dynamic Image Loader Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Load Carousel Images
+        fetch('/api/carousel')
+          .then(res => res.json())
+          .then(images => {
+            const container = document.querySelector('.hero-carousel');
+            if (!container) return;
+            container.innerHTML = '';
+            images.forEach((img, idx) => {
+              const slide = document.createElement('div');
+              slide.className = 'carousel-slide';
+              slide.style.backgroundImage = `url('${img}')`;
+              if (idx === 0) slide.classList.add('active');
+              container.appendChild(slide);
+            });
+            
+            if (images.length > 1) {
+              let current = 0;
+              setInterval(() => {
+                const slides = container.querySelectorAll('.carousel-slide');
+                if (slides.length === 0) return;
+                slides[current].classList.remove('active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('active');
+              }, 4000);
+            }
+          })
+          .catch(err => console.error('Error loading carousel:', err));
+
+        // Load Gallery Images
+        fetch('/api/gallery')
+          .then(res => res.json())
+          .then(images => {
+            const track = document.querySelector('.gallery-track');
+            if (!track) return;
+            track.innerHTML = '';
+            
+            const appendCards = (list) => {
+              list.forEach(img => {
+                const card = document.createElement('div');
+                card.className = 'gallery-card';
+                card.innerHTML = `<img src="${img}" alt="गैलरी चित्र" />`;
+                track.appendChild(card);
+              });
+            };
+            
+            appendCards(images);
+            appendCards(images); // Duplicate for seamless scrolling marquee
+          })
+          .catch(err => console.error('Error loading gallery:', err));
+      });
+    </script>
   </body>
 </html>

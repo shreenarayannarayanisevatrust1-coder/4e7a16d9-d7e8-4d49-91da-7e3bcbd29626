@@ -2,11 +2,23 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 const { google } = require('googleapis');
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+
+// Setup image subdirectories
+const carouselDir = path.join(__dirname, 'images', 'carousel');
+const galleryDir = path.join(__dirname, 'images', 'gallery');
+
+if (!fs.existsSync(carouselDir)) {
+  fs.mkdirSync(carouselDir, { recursive: true });
+}
+if (!fs.existsSync(galleryDir)) {
+  fs.mkdirSync(galleryDir, { recursive: true });
+}
 
 // Enable CORS and JSON parsing
 app.use(cors());
@@ -124,12 +136,49 @@ app.get('/api/events', (req, res) => {
   });
 });
 
-// 3. Get Gallery Images
-// If Google Drive folder ID is provided, fetches images dynamically.
-// Otherwise, falls back to the static mockup gallery list.
-app.get('/api/gallery', async (req, res) => {
-  const folderId = process.env.GOOGLE_DRIVE_FOLDER_ID;
+// 3. Get Hero Carousel Images (Local & Fallback)
+app.get('/api/carousel', (req, res) => {
+  try {
+    if (fs.existsSync(carouselDir)) {
+      const files = fs.readdirSync(carouselDir);
+      const images = files.filter(file => /\.(png|jpe?g|gif|webp|svg)$/i.test(file))
+                           .map(file => `/images/carousel/${file}`);
+      
+      if (images.length > 0) {
+        return res.json(images);
+      }
+    }
+  } catch (err) {
+    console.error('Error reading local carousel directory:', err.message);
+  }
+  
+  // Fallback to Unsplash images
+  res.json([
+    "https://images.unsplash.com/photo-1608958416715-4ba29c782cb8?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1509789014768-a42e5bfba444?auto=format&fit=crop&w=1600&q=80",
+    "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=1600&q=80"
+  ]);
+});
 
+// 4. Get Gallery Images
+// Checks local directory first. If empty, falls back to Google Drive (if configured), and then mock data.
+app.get('/api/gallery', async (req, res) => {
+  try {
+    if (fs.existsSync(galleryDir)) {
+      const files = fs.readdirSync(galleryDir);
+      const images = files.filter(file => /\.(png|jpe?g|gif|webp|svg)$/i.test(file))
+                           .map(file => `/images/gallery/${file}`);
+      
+      if (images.length > 0) {
+        return res.json(images);
+      }
+    }
+  } catch (err) {
+    console.error('Error reading local gallery directory:', err.message);
+  }
+
+  const folderId = process.env.GOOGLE_DRIVE_FOLDER_ID;
   if (driveClient && folderId) {
     try {
       const response = await driveClient.files.list({
@@ -140,17 +189,15 @@ app.get('/api/gallery', async (req, res) => {
 
       const files = response.data.files;
       if (files && files.length > 0) {
-        // Map files to client-consumable endpoints (e.g. streaming proxy links)
         const driveImages = files.map(file => `/api/drive-image/${file.id}`);
         return res.json(driveImages);
       }
     } catch (err) {
       console.error('Error fetching files from Google Drive:', err.message);
-      // fallback to mock data on API error
     }
   }
 
-  // Fallback
+  // Fallback to localDatabase mock data
   res.json(localDatabase.gallery);
 });
 

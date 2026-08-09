@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>श्री नारायण नारायणी सेवा ट्रस्ट</title>
     <meta name="description" content="श्री नारायण नारायणी सेवा ट्रस्ट - लोक कल्याण और अध्यात्मिक सेवा" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts for Devotional Luxury Aesthetics -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Hind:wght@400;500;600;700&family=Marcellus&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=5" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="icon" type="image/jpeg" href="images/logo.jpeg" />
   </head>
@@ -15,7 +19,7 @@
     <div class="hero-glow-2"></div>
 
     <header class="topbar">
-      <div class="container topbar-inner">
+      <div class="topbar-inner">
         <a class="brand" href="#home">
           <img class="brand-logo" src="images/logo.jpeg" alt="Logo" /> श्री नारायण नारायणी सेवा ट्रस्ट
         </a>
@@ -23,74 +27,531 @@
           <a href="#home">मुख्य पृष्ठ</a>
           <a href="#about">हमारे बारे में</a>
           <a href="#events">आने वाले कार्यक्रम</a>
+          <a href="#past">पिछले कार्यक्रम</a>
           <a href="#gallery">गैलरी</a>
+          <a href="#members">सदस्य</a>
           <a href="#contact">संपर्क & विकासकर्ता</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <!-- Hero Section -->
+      <!-- Hero Section (100vh Fullscreen Cinematic Devotional Carousel) -->
       <section class="hero" id="home">
-        <div class="hero-bg-overlay"></div>
-        <div class="container hero-content">
-          <div class="hero-card">
-          <div class="hero-logo-wrapper">
-            <img src="images/logo.jpeg" alt="Logo" class="hero-logo" />
-            <span class="eyebrow">श्री नारायण नारायणी सेवा ट्रस्ट</span>
+        <!-- Fullscreen Background Carousel -->
+        <div class="hero-carousel-container">
+          <div class="hero-slide active">
+            <img src="assets/hero1.jpg" alt="Hero Slide 1" class="hero-bg-img kenburns-1" loading="lazy" />
           </div>
-          <h1>श्री रानी सती दादीजी का महामंगलपाठ - ३१०० महिलाओं द्वारा</h1>
-            <p>एक शांत, कोमल और भरोसेमंद आध्यात्मिक अनुभव — जहाँ हर अनुष्ठान और सेवा मन को थोड़ी और शांति, संतोष तथा प्रसन्नता प्रदान करती है।</p>
-            <div class="btn-row">
-              <a class="btn btn-primary" href="#about">हमारी कहानी देखें</a>
-              <a class="btn btn-secondary" href="#contact">संपर्क करें</a>
+          <div class="hero-slide">
+            <img src="assets/hero2.jpg" alt="Hero Slide 2" class="hero-bg-img kenburns-2" loading="lazy" />
+          </div>
+          <div class="hero-slide">
+            <img src="assets/hero3.jpg" alt="Hero Slide 3" class="hero-bg-img kenburns-3" loading="lazy" />
+          </div>
+          <div class="hero-slide">
+            <img src="assets/hero4.jpg" alt="Hero Slide 4" class="hero-bg-img kenburns-4" loading="lazy" />
+          </div>
+          <div class="hero-slide">
+            <img src="assets/hero5.jpg" alt="Hero Slide 5" class="hero-bg-img kenburns-5" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Luxury Devotional Overlay -->
+        <div class="hero-devotional-overlay"></div>
+
+        <!-- Subtle Corner & Background Decorations -->
+        <!-- Top Left Golden Mandala (8% Opacity) -->
+        <div class="hero-decor decor-mandala-topleft">
+          <img src="images/mandala.svg" alt="" />
+        </div>
+
+        <!-- Top Right Temple Bell -->
+        <div class="hero-decor decor-bell-topright">
+          <img src="images/temple_bell.svg" alt="Temple Bell" />
+        </div>
+
+        <!-- Bottom Temple Silhouette (5% Opacity) -->
+        <div class="hero-decor decor-temple-bottom">
+          <img src="images/temple_silhouette.svg" alt="" />
+        </div>
+
+        <!-- Floating Glowing Particles (Golden Dust, Flower Petals, Tiny Diyas) -->
+        <div class="hero-floating-particles">
+          <!-- Golden Dust -->
+          <span class="particle particle-dust dust-1"></span>
+          <span class="particle particle-dust dust-2"></span>
+          <span class="particle particle-dust dust-3"></span>
+          <span class="particle particle-dust dust-4"></span>
+          <!-- Flower Petals -->
+          <span class="particle particle-petal petal-1">🌸</span>
+          <span class="particle particle-petal petal-2">🌸</span>
+          <span class="particle particle-petal petal-3">🌸</span>
+          <!-- Tiny Diyas -->
+          <span class="particle particle-diya diya-1">🪔</span>
+          <span class="particle particle-diya diya-2">🪔</span>
+        </div>
+
+        <!-- Glassmorphism Content Card -->
+        <div class="hero-content-wrapper">
+          <div class="hero-glass-card" id="heroGlassCard">
+            <!-- Trust Logo (Fade + Scale) -->
+            <div class="hero-logo-box animate-item" style="--delay: 0.4s;">
+              <img src="images/logo.jpeg" alt="श्री नारायण नारायणी सेवा ट्रस्ट" class="hero-trust-logo" />
+            </div>
+
+            <!-- Heading (Slide Up) -->
+            <h1 class="hero-main-title animate-item" style="--delay: 0.8s;">
+              <span class="title-line-1">श्री रानी सती दादीजी का</span>
+              <span class="title-line-2">महामंगलपाठ</span>
+            </h1>
+
+            <!-- Subtitle (Fade) -->
+            <div class="hero-subtitle animate-item" style="--delay: 1.2s;">
+              भक्ति • सेवा • संस्कार • मानवता
+            </div>
+
+            <!-- Description -->
+            <p class="hero-description animate-item" style="--delay: 1.5s;">
+              एक पवित्र, भव्य एवं आध्यात्मिक अनुभव — जहाँ हर अनुष्ठान और सेवा मन को शांति, संतोष तथा प्रसन्नता प्रदान करती है।
+            </p>
+
+            <!-- Buttons -->
+            <div class="hero-btn-row animate-item" style="--delay: 1.8s;">
+              <a href="#events" class="hero-btn btn-primary-gold">
+                <span>🪔 कार्यक्रम देखें</span>
+                <i class="fa-solid fa-arrow-right btn-icon-arrow"></i>
+              </a>
+              <a href="#contact" class="hero-btn btn-secondary-trans">
+                <span>🙏 सम्पर्क करें</span>
+              </a>
+            </div>
+
+            <!-- Statistics Counters -->
+            <div class="hero-stats-row animate-item" style="--delay: 2.1s;">
+              <div class="stat-item">
+                <div class="stat-icon">🏛</div>
+                <div class="stat-info">
+                  <span class="stat-number" data-target="2019">0</span>
+                  <span class="stat-label">Since 2019</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">👩</div>
+                <div class="stat-info">
+                  <span class="stat-number" data-target="3100" data-suffix="+">0</span>
+                  <span class="stat-label">महिलाओं द्वारा</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">🪔</div>
+                <div class="stat-info">
+                  <span class="stat-number" data-target="500" data-suffix="+">0</span>
+                  <span class="stat-label">आयोजन</span>
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-icon">❤️</div>
+                <div class="stat-info">
+                  <span class="stat-text">Thousands</span>
+                  <span class="stat-label">Blessed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator (Bottom Center) -->
+        <div class="hero-scroll-indicator animate-item" style="--delay: 2.4s;">
+          <a href="#about" aria-label="Scroll to Explore">
+            <span class="scroll-text">Scroll to Explore</span>
+            <div class="scroll-arrows">
+              <span class="arrow arrow-1">↓</span>
+              <span class="arrow arrow-2">↓</span>
+              <span class="arrow arrow-3">↓</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Section Divider -->
+      <div class="section-divider">
+        <img src="images/border_ornament.svg" alt="Divider" />
+      </div>
+
+      <!-- Premium Redesigned About Us Section -->
+      <section class="about-redesign-section" id="about">
+        <!-- Background Decorative Elements -->
+        <div class="about-bg-mandala mandala-left">
+          <img src="images/mandala.svg" alt="" />
+        </div>
+        <div class="about-bg-mandala mandala-right">
+          <img src="images/mandala.svg" alt="" />
+        </div>
+        <div class="about-bg-temple">
+          <img src="images/temple_silhouette.svg" alt="" />
+        </div>
+        <div class="about-ambient-glow"></div>
+
+        <div class="about-container">
+          <!-- Section Header -->
+          <div class="about-section-header">
+            <span class="about-eyebrow">✨ श्री नारायण नारायणी सेवा ट्रस्ट ✨</span>
+            <h2 class="about-main-heading">हमारे बारे में</h2>
+            <div class="about-header-divider">
+              <span class="divider-line"></span>
+              <img src="images/lotus.svg" alt="Lotus Ornament" class="divider-lotus" />
+              <span class="divider-line"></span>
+            </div>
+            <p class="about-header-subtitle">
+              विश्वास और सेवा की पावन धरा, जो मन में श्रद्धा, संस्कार और अध्यात्म का प्रकाश भरती है।
+            </p>
+          </div>
+
+          <!-- Two-Column Main Grid -->
+          <div class="about-two-column-grid">
+            <!-- Left Column: Featured Image -->
+            <div class="about-image-column">
+              <div class="about-image-card">
+                <div class="about-image-frame">
+                  <img 
+                    src="images/img_main.jpeg" 
+                    alt="श्री नारायण नारायणी सेवा ट्रस्ट" 
+                    class="about-featured-img" 
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Text & 4 Core Pillars -->
+            <div class="about-content-column">
+              <p class="about-intro-text">
+                <strong>श्री नारायण नारायणी सेवा ट्रस्ट</strong> की स्थापना 13 जनवरी 2019 को बांधाघाट, हावड़ा (पश्चिम बंगाल) में एक पवित्र संकल्प के साथ की गई। हमारा उद्देश्य केवल धार्मिक गतिविधियों का आयोजन करना ही नहीं, बल्कि सेवा, संस्कार और मानवता के मूल्यों को समाज के प्रत्येक व्यक्ति तक पहुँचाना है।
+              </p>
+
+              <!-- 4 Structured Pillars -->
+              <div class="about-pillars-grid">
+                <!-- 1. Vision -->
+                <div class="about-pillar-card">
+                  <div class="pillar-icon-box">
+                    <span class="pillar-icon">🚩</span>
+                  </div>
+                  <div class="pillar-info">
+                    <h3 class="pillar-title">दृष्टिकोण (Vision)</h3>
+                    <p class="pillar-desc">
+                      सनातन संस्कृति और भारतीय परंपराओं से प्रेरित होकर धर्म, संस्कृति और नैतिक मूल्यों के प्रति जागरूकता फैलाना तथा करुणा व सेवा से परिपूर्ण समाज का निर्माण करना।
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 2. Mission -->
+                <div class="about-pillar-card">
+                  <div class="pillar-icon-box">
+                    <span class="pillar-icon">📜</span>
+                  </div>
+                  <div class="pillar-info">
+                    <h3 class="pillar-title">ध्येय (Mission)</h3>
+                    <p class="pillar-desc">
+                      मानव सेवा के पथ पर चलते हुए निरंतर धार्मिक, सांस्कृतिक एवं सामाजिक कार्यों के माध्यम से समाज के प्रत्येक वर्ग तक संस्कार और सहायता पहुँचाना।
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 3. Values -->
+                <div class="about-pillar-card">
+                  <div class="pillar-icon-box">
+                    <span class="pillar-icon">💎</span>
+                  </div>
+                  <div class="pillar-info">
+                    <h3 class="pillar-title">मूल्य एवं संस्कार (Values)</h3>
+                    <p class="pillar-desc">
+                      निस्वार्थ समर्पण, सादगी, आत्मीयता, नैतिक कर्तव्य, और "मानव सेवा ही ईश्वर की सच्ची सेवा है" का अटल पावन संकल्प।
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 4. Service Activities -->
+                <div class="about-pillar-card">
+                  <div class="pillar-icon-box">
+                    <span class="pillar-icon">🪔</span>
+                  </div>
+                  <div class="pillar-info">
+                    <h3 class="pillar-title">सेवा गतिविधियाँ (Services)</h3>
+                    <p class="pillar-desc">
+                      सामूहिक अनुष्ठान, ३१०० महिलाओं द्वारा महामंगलपाठ, भंडारा, शिक्षा सहायता, स्वास्थ्य शिविर और सांस्कृतिक उत्थान का निरंतर प्रयास।
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Highlighted Quote Box -->
+          <div class="about-quote-wrapper">
+            <div class="about-quote-box">
+              <span class="quote-mark left-quote">“</span>
+              <h3 class="about-quote-text">मानव सेवा ही ईश्वर की सच्ची सेवा है</h3>
+              <span class="quote-mark right-quote">”</span>
+              <p class="about-quote-sub">— श्री नारायण नारायणी सेवा ट्रस्ट, बांधाघाट (हावड़ा)</p>
+            </div>
+          </div>
+
+          <!-- Four Feature Cards -->
+          <div class="about-features-grid">
+            <div class="about-feature-card">
+              <div class="feature-icon-wrapper">
+                <span class="feature-icon">🙏</span>
+              </div>
+              <h4 class="feature-title">आस्था (Faith)</h4>
+              <p class="feature-desc">ईश्वर के प्रति अटूट आस्था और भक्ति का पावन संचार।</p>
+            </div>
+
+            <div class="about-feature-card">
+              <div class="feature-icon-wrapper">
+                <span class="feature-icon">🤝</span>
+              </div>
+              <h4 class="feature-title">समर्पण (Service)</h4>
+              <p class="feature-desc">निस्वार्थ भाव से समाज के कल्याण हेतु निरंतर प्रयास।</p>
+            </div>
+
+            <div class="about-feature-card">
+              <div class="feature-icon-wrapper">
+                <span class="feature-icon">❤️</span>
+              </div>
+              <h4 class="feature-title">करुणा (Humanity)</h4>
+              <p class="feature-desc">हर जीव के प्रति प्रेम, सहानुभूति और आत्मीयता।</p>
+            </div>
+
+            <div class="about-feature-card">
+              <div class="feature-icon-wrapper">
+                <span class="feature-icon">🪔</span>
+              </div>
+              <h4 class="feature-title">अध्यात्म (Spirituality)</h4>
+              <p class="feature-desc">मानसिक शांति और सनातन संस्कारों का दिव्य प्रकाश।</p>
+            </div>
+          </div>
+
+          <!-- Statistics Section with Animated Counters -->
+          <div class="about-stats-container">
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number-box">
+                  <span class="stat-number" data-target="2019">2019</span>
+                </div>
+                <span class="stat-label">स्थापना वर्ष</span>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-number-box">
+                  <span class="stat-number" data-target="3100">3100</span><span class="stat-plus">+</span>
+                </div>
+                <span class="stat-label">महिला प्रतिभागी</span>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-number-box">
+                  <span class="stat-number" data-target="500">500</span><span class="stat-plus">+</span>
+                </div>
+                <span class="stat-label">धार्मिक व सामाजिक कार्यक्रम</span>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-number-box">
+                  <span class="stat-number-text">हजारों</span>
+                </div>
+                <span class="stat-label">लाभान्वित श्रद्धालु</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- About Section -->
-      <section class="section" id="about">
-        <div class="container about-grid">
-          <div class="panel about-image">
-            <img src="https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=900&q=80" alt="शांति और विश्वास का प्रतीक दीया" />
-          </div>
-          <div class="panel about-text">
-            <div class="section-heading">
-              <h2>हमारे बारे में</h2>
-              <p>विश्वास और सेवा की पावन धरा, जो मन में श्रद्धा और अध्यात्म का प्रकाश भरती है।</p>
+      <!-- Section Divider -->
+      <div class="section-divider">
+        <img src="images/border_ornament.svg" alt="Divider" />
+      </div>
+
+      <!-- Ultra-Premium Upcoming Events Section -->
+      <section class="ultra-events-section" id="events">
+        <!-- Ambient Golden Glow -->
+        <div class="ultra-ambient-glow"></div>
+
+        <!-- Faint Temple Silhouette Background (3-5% Opacity) -->
+        <div class="ultra-bg-silhouette">
+          <img src="images/temple_silhouette.svg" alt="" />
+        </div>
+
+        <!-- Corner Watermarks (Mandala & Lotus patterns) -->
+        <div class="ultra-watermark watermark-top-left">
+          <img src="images/mandala.svg" alt="" />
+        </div>
+        <div class="ultra-watermark watermark-top-right">
+          <img src="images/lotus.svg" alt="" />
+        </div>
+        <div class="ultra-watermark watermark-bottom-left">
+          <img src="images/lotus.svg" alt="" />
+        </div>
+        <div class="ultra-watermark watermark-bottom-right">
+          <img src="images/mandala.svg" alt="" />
+        </div>
+
+        <div class="ultra-events-container">
+          <!-- Section Header -->
+          <header class="ultra-section-header">
+            <h2 class="ultra-header-title">🌸 आने वाला कार्यक्रम 🌸</h2>
+            <div class="ultra-header-divider">
+              <span class="ultra-line"></span>
+              <img src="images/lotus.svg" alt="Lotus Ornament" class="ultra-lotus-icon" />
+              <span class="ultra-line"></span>
             </div>
-            <p>यह सेवा ट्रस्ट दर्शाता है कि निस्वार्थ समर्पण, धार्मिक निष्ठा और मानवीय सेवा की शक्ति कितनी कल्याणकारी हो सकती है। हमारा प्रत्येक प्रयास एक सुंदर और पावन संदेश लेकर आता है — कि परोपकार और भक्ति केवल विचार नहीं, वरन एक जीवंत अनुभव हैं।</p>
-            <ul>
-              <li>सरलता, सादगी और सुरुचिपूर्ण अध्यात्म</li>
-              <li>मानसिक शांति, ध्यान और सेवा भावना</li>
-              <li>श्रद्धा एवं विश्वास को जागृत करने वाले अनुष्ठान</li>
-            </ul>
+            <p class="ultra-header-subtitle">
+              एक ऐसा अलौकिक क्षण जहाँ विश्वास और भक्ति की पावन ज्योति सबके जीवन को प्रकाशित करेगी।
+            </p>
+          </header>
+
+          <!-- Main Premium Card -->
+          <div class="ultra-main-card">
+            <!-- Left Side: Devotional Clickable Image Poster -->
+            <div class="ultra-card-left">
+              <!-- Small Premium Event Badge -->
+              <div class="poster-top-badge-wrapper">
+                <span class="poster-special-badge">🪔 विशेष आयोजन</span>
+              </div>
+              <div class="ultra-image-wrapper" onclick="openPosterModal()">
+                <span class="corner-ornament top-left">✦</span>
+                <span class="corner-ornament top-right">✦</span>
+                <span class="corner-ornament bottom-left">✦</span>
+                <span class="corner-ornament bottom-right">✦</span>
+                <img 
+                  src="images/upcomingEvents.jpeg" 
+                  alt="श्री रानी सती दादीजी का ३१०० महिला महामंगलपाठ" 
+                  class="ultra-event-image" 
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            <!-- Right Side: Event Details, 2x2 Grid, Countdown & Invitation Card -->
+            <div class="ultra-card-right">
+              <!-- Top Capsule Badge -->
+              <div class="ultra-badge-wrapper">
+                <span class="ultra-badge">✨ ३१०० महामंगलपाठ ✨</span>
+              </div>
+
+              <!-- Main Title -->
+              <h3 class="ultra-event-heading">
+                श्री रानी सती दादीजी का<br>३१०० महिला महामंगलपाठ
+              </h3>
+
+              <!-- Thin Golden Divider with Lotus Icon -->
+              <div class="ultra-card-divider">
+                <span class="card-line"></span>
+                <img src="images/lotus.svg" alt="Lotus" class="card-lotus-icon" />
+                <span class="card-line"></span>
+              </div>
+
+              <!-- Concise 3-Line Devotional Description -->
+              <p class="ultra-event-description">
+                एक भव्य अलौकिक अनुष्ठान, जहाँ ३१०० महिलाओं द्वारा सामूहिक महामंगलपाठ, दिव्य महाआरती एवं भजनों की पावन धारा प्रवाहित होगी। माँ रानी सती दादीजी का दिव्य आशीर्वाद प्राप्त करने हेतु आप सभी सपरिवार सादर आमंत्रित हैं।
+              </p>
+
+              <!-- 2x2 Event Information Cards Grid -->
+              <div class="event-info-grid-2x2">
+                <!-- Card 1: Date -->
+                <div class="event-grid-card">
+                  <div class="event-card-icon-box">
+                    <span class="event-card-icon">📅</span>
+                  </div>
+                  <div class="event-card-details">
+                    <span class="event-card-title">दिनांक</span>
+                    <span class="event-card-value">23 अगस्त 2026, रविवार</span>
+                  </div>
+                </div>
+
+                <!-- Card 2: Time -->
+                <div class="event-grid-card">
+                  <div class="event-card-icon-box">
+                    <span class="event-card-icon">⏰</span>
+                  </div>
+                  <div class="event-card-details">
+                    <span class="event-card-title">समय</span>
+                    <span class="event-card-value">सुबह 11:00 बजे</span>
+                  </div>
+                </div>
+
+                <!-- Card 3: Venue (Slightly larger text spacing) -->
+                <div class="event-grid-card venue-card">
+                  <div class="event-card-icon-box">
+                    <span class="event-card-icon">📍</span>
+                  </div>
+                  <div class="event-card-details">
+                    <span class="event-card-title">स्थान</span>
+                    <span class="event-card-value">उत्सव स्थल – डिविनिटी पवेलियन, लेक टाउन, कोलकाता</span>
+                  </div>
+                </div>
+
+                <!-- Card 4: Organizer -->
+                <div class="event-grid-card">
+                  <div class="event-card-icon-box">
+                    <span class="event-card-icon">🏛</span>
+                  </div>
+                  <div class="event-card-details">
+                    <span class="event-card-title">आयोजक</span>
+                    <span class="event-card-value">श्री नारायण नारायणी सेवा ट्रस्ट, बांधाघाट (हावड़ा)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Live Countdown Timer -->
+              <div class="devotional-countdown-container" id="countdownContainer">
+                <h4 class="countdown-heading">🕉️ कार्यक्रम प्रारम्भ होने में शेष समय</h4>
+                <div class="countdown-grid" id="countdownBoxes">
+                  <div class="countdown-card">
+                    <span class="countdown-number" id="cdDays">00</span>
+                    <span class="countdown-label">🗓️ Days</span>
+                  </div>
+                  <div class="countdown-card">
+                    <span class="countdown-number" id="cdHours">00</span>
+                    <span class="countdown-label">⏰ Hours</span>
+                  </div>
+                  <div class="countdown-card">
+                    <span class="countdown-number" id="cdMinutes">00</span>
+                    <span class="countdown-label">⏳ Minutes</span>
+                  </div>
+                  <div class="countdown-card">
+                    <span class="countdown-number" id="cdSeconds">00</span>
+                    <span class="countdown-label">⌛ Seconds</span>
+                  </div>
+                </div>
+                <div class="countdown-expired-msg" id="countdownExpired" style="display: none;">
+                  🎉 कार्यक्रम प्रारम्भ हो चुका है।<br>🙏 जय श्री रानी सती दादी 🙏
+                </div>
+              </div>
+
+              <!-- Enhanced Devotional Invitation Card -->
+              <div class="devotional-invitation-card">
+                <span class="invitation-ornament left">🪔</span>
+                <p class="invitation-text">🙏 सभी श्रद्धालुओं एवं भक्तजनों का हार्दिक स्वागत एवं अभिनंदन है 🙏</p>
+                <span class="invitation-ornament right">🪔</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Upcoming Events Section -->
-      <section class="section" id="events">
-        <div class="container">
-          <div class="section-heading">
-            <h2>आने वाला कार्यक्रम</h2>
-            <p>एक ऐसा अलौकिक क्षण जहाँ विश्वास और भक्ति की पावन ज्योति सबके जीवन को प्रकाशित करेगी।</p>
-          </div>
-          <div class="upcoming-card">
-            <img src="https://images.unsplash.com/photo-1509789014768-a42e5bfba444?auto=format&fit=crop&w=1100&q=80" alt="आने वाला रात्री ज्योति उत्सव" />
-            <div class="upcoming-info">
-              <h3>रात्री ज्योति उत्सव</h3>
-              <p>एक भव्य आध्यात्मिक संध्या, जहाँ दिव्य महाआरती, सुंदर भजनों की श्रृंखला और सामूहिक प्रार्थना की पवित्र ज्योति एक साथ प्रज्वलित होगी।</p>
-              <p class="glow">तिथि: 15 जुलाई 2026 • समय: शाम 7:00 बजे</p>
-            </div>
-            <div class="hover-panel">
-              <strong>विशेष विवरण</strong>
-              <p>सामूहिक भक्ति रस, दिव्य ज्योति दर्शन और संपूर्ण परिवार के लिए मंगलमय व पावन वातावरण।</p>
-            </div>
-          </div>
+      <!-- Full-Screen Lightbox Modal for Event Poster -->
+      <div class="poster-modal" id="posterModal" onclick="closePosterModal(event)">
+        <div class="poster-modal-content" onclick="event.stopPropagation()">
+          <button class="poster-modal-close" onclick="closePosterModal(event)" aria-label="Close">&times;</button>
+          <img src="images/upcomingEvents.jpeg" alt="श्री नारायण नारायणी सेवा ट्रस्ट - ३१०० महामंगलपाठ" class="poster-modal-img" />
+          <p class="poster-modal-caption">श्री नारायण नारायणी सेवा ट्रस्ट — ३१०० महामंगलपाठ</p>
         </div>
-      </section>
+      </div>
+
+      <!-- Section Divider -->
+      <div class="section-divider">
+        <img src="images/border_ornament.svg" alt="Divider" />
+      </div>
 
       <!-- Past Events Section -->
       <section class="section" id="past">
@@ -99,190 +560,1714 @@
             <h2>पिछले कार्यक्रम</h2>
             <p>पावन स्मृतियों की एक अविरल श्रृंखला — जहाँ प्रत्येक कल्याणकारी आयोजन ने हमारी आस्था को नया आयाम दिया।</p>
           </div>
-          <div class="events-row">
-            <div class="past-track">
-              <!-- Original 6 Items -->
-              <article class="past-item">
-                <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=700&q=80" alt="प्रकाश संध्या" />
-                <div class="content">
-                  <h3>प्रकाश संध्या</h3>
-                  <p>धैर्य, दिव्य संगीत और मानसिक शांति का अलौकिक संगम।</p>
+        </div>
+        <div class="events-row">
+          <div class="past-track">
+            <!-- Original 6 Items -->
+            <article class="past-item">
+              <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=700&q=80" alt="प्रकाश संध्या" />
+              <div class="content">
+                <h3>प्रकाश संध्या</h3>
+                <p>धैर्य, दिव्य संगीत और मानसिक शांति का अलौकिक संगम।</p>
+              </div>
+              <div class="popup">
+                <strong>भव्य सफलता</strong>
+                <p>300 से अधिक श्रद्धालुओं ने भाग लेकर पुण्य अर्जित किया।</p>
+              </div>
+            </article>
+            <article class="past-item">
+              <img src="https://images.unsplash.com/photo-1566908829744-8d4e92ec4a7a?auto=format&fit=crop&w=700&q=80" alt="स्नेह महोत्सव" />
+              <div class="content">
+                <h3>स्नेह महोत्सव</h3>
+                <p>सामूहिक सहयोग, भंडारा और आपसी आत्मीयता का पावन पर्व।</p>
+              </div>
+              <div class="popup">
+                <strong>अखंड एकता</strong>
+                <p>संपूर्ण समाज के सहयोग व स्नेह ने इस उत्सव को सफल बनाया।</p>
+              </div>
+            </article>
+            <article class="past-item">
+              <img src="https://images.unsplash.com/photo-1590076214667-c06d7e97a8e2?auto=format&fit=crop&w=700&q=80" alt="विश्वास पथ" />
+              <div class="content">
+                <h3>विश्वास पथ</h3>
+                <p>एक पावन आध्यात्मिक यात्रा जो श्रद्धालुओं के हृदय में बस गई।</p>
+              </div>
+              <div class="popup">
+                <strong>सकारात्मक प्रभाव</strong>
+                <p>अनेक साधकों ने आध्यात्मिक शांति और आत्म-संतोष पाया।</p>
+              </div>
+            </article>
+            <article class="past-item">
+              <img src="https://images.unsplash.com/photo-1513829096990-4b211e19eb0a?auto=format&fit=crop&w=700&q=80" alt="मोमबत्ती संध्या" />
+              <div class="content">
+                <h3>मोमबत्ती संध्या</h3>
+                <p>शांति, ध्यान और आत्मनिरीक्षण की एक परम शांत रात्रि।</p>
+              </div>
+              <div class="popup">
+                <strong>गहन संवेदना</strong>
+                <p>श्रद्धा की लौ के साथ हर भक्त ने परम सुख का अनुभव किया।</p>
+              </div>
+            </article>
+            <article class="past-item">
+              <img src="https://images.unsplash.com/photo-1505232458729-26417ff63cfa?auto=format&fit=crop&w=700&q=80" alt="स्नेह रात्रि" />
+              <div class="content">
+                <h3>स्नेह रात्रि</h3>
+                <p>आपसी भाईचारे और परम पूज्य संतों के सानिध्य का दिव्य अनुभव।</p>
+              </div>
+              <div class="popup">
+                <strong>मधुर स्मृति</strong>
+                <p>एक अविस्मरणीय शाम, जिसकी गूंज आज भी श्रद्धा भाव में जीवित है।</p>
+              </div>
+            </article>
+            <article class="past-item">
+              <img src="https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=700&q=80" alt="प्रकाश उत्सव" />
+              <div class="content">
+                <h3>प्रकाश उत्सव</h3>
+                <p>नई आशा, उमंग और समाज कल्याण की दिशा में उठाया गया कदम।</p>
+              </div>
+              <div class="popup">
+                <strong>दिव्य आशा</strong>
+                <p>हर प्रज्वलित दीपक ने अंधकार को मिटाकर ज्ञान का प्रकाश फैलाया।</p>
+              </div>
+            </article>
+            <!-- Duplicate Set for Seamless Scrolling -->
+            <article class="past-item">
+              <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=700&q=80" alt="प्रकाश संध्या" />
+              <div class="content">
+                <h3>प्रकाश संध्या</h3>
+                <p>धैर्य, दिव्य संगीत और मानसिक शांति का अलौकिक संगम।</p>
+              </div>
+              <div class="popup">
+                <strong>भव्य सफलता</strong>
+                <p>300 से अधिक श्रद्धालुओं ने भाग लेकर पुण्य अर्जित किया।</p>
+              </div>
+            </article>
+            <article class="past-item">
+              <img src="https://images.unsplash.com/photo-1566908829744-8d4e92ec4a7a?auto=format&fit=crop&w=700&q=80" alt="स्नेह महोत्सव" />
+              <div class="content">
+                <h3>स्नेह महोत्सव</h3>
+                <p>सामूहिक सहयोग, भंडारा और आपसी आत्मीयता का पावन पर्व।</p>
+              </div>
+              <div class="popup">
+                <strong>अखंड एकता</strong>
+                <p>संपूर्ण समाज के सहयोग व स्नेह ने इस उत्सव को सफल बनाया।</p>
+              </div>
+            </article>
+            <article class="past-item">
+              <img src="https://images.unsplash.com/photo-1590076214667-c06d7e97a8e2?auto=format&fit=crop&w=700&q=80" alt="विश्वास पथ" />
+              <div class="content">
+                <h3>विश्वास पथ</h3>
+                <p>एक पावन आध्यात्मिक यात्रा जो श्रद्धालुओं के हृदय में बस गई।</p>
+              </div>
+              <div class="popup">
+                <strong>सकारात्मक प्रभाव</strong>
+                <p>अनेक साधकों ने आध्यात्मिक शांति और आत्म-संतोष पाया।</p>
+              </div>
+            </article>
+            <article class="past-item">
+              <img src="https://images.unsplash.com/photo-1513829096990-4b211e19eb0a?auto=format&fit=crop&w=700&q=80" alt="मोमबत्ती संध्या" />
+              <div class="content">
+                <h3>मोमबत्ती संध्या</h3>
+                <p>शांति, ध्यान और आत्मनिरीक्षण की एक परम शांत रात्रि।</p>
+              </div>
+              <div class="popup">
+                <strong>गहन संवेदना</strong>
+                <p>श्रद्धा की लौ के साथ हर भक्त ने परम सुख का अनुभव किया।</p>
+              </div>
+            </article>
+            <article class="past-item">
+              <img src="https://images.unsplash.com/photo-1505232458729-26417ff63cfa?auto=format&fit=crop&w=700&q=80" alt="स्नेह रात्रि" />
+              <div class="content">
+                <h3>स्नेह रात्रि</h3>
+                <p>आपसी भाईचारे और परम पूज्य संतों के सानिध्य का दिव्य अनुभव।</p>
+              </div>
+              <div class="popup">
+                <strong>मधुर स्मृति</strong>
+                <p>एक अविस्मरणीय शाम, जिसकी गूंज आज भी श्रद्धा भाव में जीवित है।</p>
+              </div>
+            </article>
+            <article class="past-item">
+              <img src="https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=700&q=80" alt="प्रकाश उत्सव" />
+              <div class="content">
+                <h3>प्रकाश उत्सव</h3>
+                <p>नई आशा, उमंग और समाज कल्याण की दिशा में उठाया गया कदम।</p>
+              </div>
+              <div class="popup">
+                <strong>दिव्य आशा</strong>
+                <p>हर प्रज्वलित दीपक ने अंधकार को मिटाकर ज्ञान का प्रकाश फैलाया।</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Divider -->
+      <div class="section-divider">
+        <img src="images/border_ornament.svg" alt="Divider" />
+      </div>
+
+      <!-- Ultra-Premium Devotional Gallery Section -->
+      <section class="gallery-redesign-section" id="gallery">
+        <!-- Ambient Golden Glow -->
+        <div class="gallery-ambient-glow"></div>
+
+        <!-- Faint Temple Silhouette Background (3-5% Opacity) -->
+        <div class="gallery-bg-silhouette">
+          <img src="images/temple_silhouette.svg" alt="" />
+        </div>
+
+        <!-- Corner Watermark Patterns -->
+        <div class="gallery-watermark watermark-top-left">
+          <img src="images/mandala.svg" alt="" />
+        </div>
+        <div class="gallery-watermark watermark-top-right">
+          <img src="images/lotus.svg" alt="" />
+        </div>
+        <div class="gallery-watermark watermark-bottom-left">
+          <img src="images/lotus.svg" alt="" />
+        </div>
+        <div class="gallery-watermark watermark-bottom-right">
+          <img src="images/mandala.svg" alt="" />
+        </div>
+
+        <div class="gallery-section-container">
+          <!-- 1. Section Heading -->
+          <header class="gallery-section-header">
+            <h2 class="gallery-header-title">🌸 गैलरी 🌸</h2>
+            <div class="gallery-header-divider">
+              <span class="gallery-line"></span>
+              <span class="gallery-diya-ornament">🪔</span>
+              <span class="gallery-line"></span>
+            </div>
+            <p class="gallery-header-subtitle">
+              भक्ति, सेवा और आध्यात्मिक उत्सवों के कुछ अविस्मरणीय क्षण
+            </p>
+          </header>
+
+          <!-- 8. Gallery Counter / Section Label -->
+          <div class="gallery-counter-label">
+            <span class="gallery-counter-text">
+              <span class="gallery-counter-icon">📷</span>
+              वर्षों की सेवा की अमूल्य झलकियाँ
+            </span>
+            <div class="gallery-counter-subline"></div>
+          </div>
+
+          <!-- 2, 3, 7. Infinite Floating Carousel Wrapper (Width 92–95%) -->
+          <div class="gallery-carousel-wrapper">
+            <div class="gallery-track">
+              <!-- Set 1 (8 Authentic Photo Floating Cards) -->
+              <div class="gallery-card" onclick="openGalleryModal(0)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">महामंगलपाठ</span>
+                  <img src="images/img1.jpg" alt="३१०० महिला महामंगलपाठ" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">३१०० महिला महामंगलपाठ</h3>
+                    <span class="gallery-card-date">🗓️ 23 August 2026</span>
+                    <p class="gallery-card-desc">३१०० महिलाओं द्वारा आयोजित भव्य आध्यात्मिक आयोजन।</p>
+                  </div>
                 </div>
-                <div class="popup">
-                  <strong>भव्य सफलता</strong>
-                  <p>300 से अधिक श्रद्धालुओं ने भाग लेकर पुण्य अर्जित किया।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(1)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">दिव्य महाआरती</span>
+                  <img src="images/img2.jpg" alt="श्री रानी सती दादीजी महाआरती" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">श्री रानी सती दादीजी महाआरती</h3>
+                    <span class="gallery-card-date">🗓️ 15 जनवरी 2026</span>
+                    <p class="gallery-card-desc">प्रज्वलित दीपों एवं शंखध्वनि के साथ दादीजी की अलौकिक आरती।</p>
+                  </div>
                 </div>
-              </article>
-              <article class="past-item">
-                <img src="https://images.unsplash.com/photo-1566908829744-8d4e92ec4a7a?auto=format&fit=crop&w=700&q=80" alt="स्नेह महोत्सव" />
-                <div class="content">
-                  <h3>स्नेह महोत्सव</h3>
-                  <p>सामूहिक सहयोग, भंडारा और आपसी आत्मीयता का पावन पर्व।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(2)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">भजन संध्या</span>
+                  <img src="images/img3.jpg" alt="भव्य भक्ति व भजन संध्या" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">भव्य भक्ति व भजन संध्या</h3>
+                    <span class="gallery-card-date">🗓️ 10 नवंबर 2025</span>
+                    <p class="gallery-card-desc">सुप्रसिद्ध भजन गायकों द्वारा सुमधुर भजनों की अविरल पावन धारा।</p>
+                  </div>
                 </div>
-                <div class="popup">
-                  <strong>अखंड एकता</strong>
-                  <p>संपूर्ण समाज के सहयोग व स्नेह ने इस उत्सव को सफल बनाया।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(3)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">पुष्प वर्षा</span>
+                  <img src="images/img4.jpg" alt="दिव्य पुष्प वृष्टि उत्सव" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">दिव्य पुष्प वृष्टि उत्सव</h3>
+                    <span class="gallery-card-date">🗓️ 05 सितंबर 2025</span>
+                    <p class="gallery-card-desc">दादीजी के पावन दरबार में अपार पुष्प वर्षा एवं संकीर्तन।</p>
+                  </div>
                 </div>
-              </article>
-              <article class="past-item">
-                <img src="https://images.unsplash.com/photo-1590076214667-c06d7e97a8e2?auto=format&fit=crop&w=700&q=80" alt="विश्वास पथ" />
-                <div class="content">
-                  <h3>विश्वास पथ</h3>
-                  <p>एक पावन आध्यात्मिक यात्रा जो श्रद्धालुओं के हृदय में बस गई।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(4)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">भंडारा सेवा</span>
+                  <img src="images/img5.jpg" alt="मानव सेवा एवं महाप्रसाद" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">मानव सेवा एवं महाप्रसाद</h3>
+                    <span class="gallery-card-date">🗓️ 14 अप्रैल 2025</span>
+                    <p class="gallery-card-desc">हजारों श्रद्धालुओं के बीच निस्वार्थ भाव से महाप्रसाद वितरण।</p>
+                  </div>
                 </div>
-                <div class="popup">
-                  <strong>सकारात्मक प्रभाव</strong>
-                  <p>अनेक साधकों ने आध्यात्मिक शांति और आत्म-संतोष पाया।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(5)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">सांस्कृतिक</span>
+                  <img src="images/img 6.jpg" alt="सनातन संस्कार व सांस्कृतिक पर्व" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">सनातन संस्कार व सांस्कृतिक पर्व</h3>
+                    <span class="gallery-card-date">🗓️ 26 जनवरी 2025</span>
+                    <p class="gallery-card-desc">सनातन संस्कृति एवं भारतीय आध्यात्मिक परंपराओं का महोत्सव।</p>
+                  </div>
                 </div>
-              </article>
-              <article class="past-item">
-                <img src="https://images.unsplash.com/photo-1513829096990-4b211e19eb0a?auto=format&fit=crop&w=700&q=80" alt="मोमबत्ती संध्या" />
-                <div class="content">
-                  <h3>मोमबत्ती संध्या</h3>
-                  <p>शांति, ध्यान और आत्मनिरीक्षण की एक परम शांत रात्रि।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(6)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">श्रद्धालु समागम</span>
+                  <img src="images/DSC06989.jpg" alt="विशाल भक्त समागम" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">विशाल भक्त समागम</h3>
+                    <span class="gallery-card-date">🗓️ 01 जनवरी 2025</span>
+                    <p class="gallery-card-desc">हजारों श्रद्धालुओं की उपस्थिति में पावन आशीर्वाद समारोह।</p>
+                  </div>
                 </div>
-                <div class="popup">
-                  <strong>गहन संवेदना</strong>
-                  <p>श्रद्धा की लौ के साथ हर भक्त ने परम सुख का अनुभव किया।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(7)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">दीपोत्सव</span>
+                  <img src="images/ESC01407.jpg" alt="अलौकिक दीपोत्सव" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">अलौकिक दीपोत्सव</h3>
+                    <span class="gallery-card-date">🗓️ 12 नवंबर 2024</span>
+                    <p class="gallery-card-desc">हजारों दीपों की दिव्य ज्योति से प्रज्वलित पावन मंदिर परिसर।</p>
+                  </div>
                 </div>
-              </article>
-              <article class="past-item">
-                <img src="https://images.unsplash.com/photo-1505232458729-26417ff63cfa?auto=format&fit=crop&w=700&q=80" alt="स्नेह रात्रि" />
-                <div class="content">
-                  <h3>स्नेह रात्रि</h3>
-                  <p>आपसी भाईचारे और परम पूज्य संतों के सानिध्य का दिव्य अनुभव।</p>
+              </div>
+
+              <!-- Set 2 (Duplicate 8 items for True Infinite Loop) -->
+              <div class="gallery-card" onclick="openGalleryModal(0)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">महामंगलपाठ</span>
+                  <img src="images/img1.jpg" alt="३१०० महिला महामंगलपाठ" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">३१०० महिला महामंगलपाठ</h3>
+                    <span class="gallery-card-date">🗓️ 23 August 2026</span>
+                    <p class="gallery-card-desc">३१०० महिलाओं द्वारा आयोजित भव्य आध्यात्मिक आयोजन।</p>
+                  </div>
                 </div>
-                <div class="popup">
-                  <strong>मधुर स्मृति</strong>
-                  <p>एक अविस्मरणीय शाम, जिसकी गूंज आज भी श्रद्धा भाव में जीवित है।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(1)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">दिव्य महाआरती</span>
+                  <img src="images/img2.jpg" alt="श्री रानी सती दादीजी महाआरती" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">श्री रानी सती दादीजी महाआरती</h3>
+                    <span class="gallery-card-date">🗓️ 15 जनवरी 2026</span>
+                    <p class="gallery-card-desc">प्रज्वलित दीपों एवं शंखध्वनि के साथ दादीजी की अलौकिक आरती।</p>
+                  </div>
                 </div>
-              </article>
-              <article class="past-item">
-                <img src="https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=700&q=80" alt="प्रकाश उत्सव" />
-                <div class="content">
-                  <h3>प्रकाश उत्सव</h3>
-                  <p>नई आशा, उमंग और समाज कल्याण की दिशा में उठाया गया कदम।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(2)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">भजन संध्या</span>
+                  <img src="images/img3.jpg" alt="भव्य भक्ति व भजन संध्या" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">भव्य भक्ति व भजन संध्या</h3>
+                    <span class="gallery-card-date">🗓️ 10 नवंबर 2025</span>
+                    <p class="gallery-card-desc">सुप्रसिद्ध भजन गायकों द्वारा सुमधुर भजनों की अविरल पावन धारा।</p>
+                  </div>
                 </div>
-                <div class="popup">
-                  <strong>दिव्य आशा</strong>
-                  <p>हर प्रज्वलित दीपक ने अंधकार को मिटाकर ज्ञान का प्रकाश फैलाया।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(3)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">पुष्प वर्षा</span>
+                  <img src="images/img4.jpg" alt="दिव्य पुष्प वृष्टि उत्सव" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">दिव्य पुष्प वृष्टि उत्सव</h3>
+                    <span class="gallery-card-date">🗓️ 05 सितंबर 2025</span>
+                    <p class="gallery-card-desc">दादीजी के पावन दरबार में अपार पुष्प वर्षा एवं संकीर्तन।</p>
+                  </div>
                 </div>
-              </article>
-              <!-- Duplicate Set for Seamless Scrolling -->
-              <article class="past-item">
-                <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=700&q=80" alt="प्रकाश संध्या" />
-                <div class="content">
-                  <h3>प्रकाश संध्या</h3>
-                  <p>धैर्य, दिव्य संगीत और मानसिक शांति का अलौकिक संगम।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(4)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">भंडारा सेवा</span>
+                  <img src="images/img5.jpg" alt="मानव सेवा एवं महाप्रसाद" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">मानव सेवा एवं महाप्रसाद</h3>
+                    <span class="gallery-card-date">🗓️ 14 अप्रैल 2025</span>
+                    <p class="gallery-card-desc">हजारों श्रद्धालुओं के बीच निस्वार्थ भाव से महाप्रसाद वितरण।</p>
+                  </div>
                 </div>
-                <div class="popup">
-                  <strong>भव्य सफलता</strong>
-                  <p>300 से अधिक श्रद्धालुओं ने भाग लेकर पुण्य अर्जित किया।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(5)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">सांस्कृतिक</span>
+                  <img src="images/img 6.jpg" alt="सनातन संस्कार व सांस्कृतिक पर्व" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">सनातन संस्कार व सांस्कृतिक पर्व</h3>
+                    <span class="gallery-card-date">🗓️ 26 जनवरी 2025</span>
+                    <p class="gallery-card-desc">सनातन संस्कृति एवं भारतीय आध्यात्मिक परंपराओं का महोत्सव।</p>
+                  </div>
                 </div>
-              </article>
-              <article class="past-item">
-                <img src="https://images.unsplash.com/photo-1566908829744-8d4e92ec4a7a?auto=format&fit=crop&w=700&q=80" alt="स्नेह महोत्सव" />
-                <div class="content">
-                  <h3>स्नेह महोत्सव</h3>
-                  <p>सामूहिक सहयोग, भंडारा और आपसी आत्मीयता का पावन पर्व।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(6)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">श्रद्धालु समागम</span>
+                  <img src="images/DSC06989.jpg" alt="विशाल भक्त समागम" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">विशाल भक्त समागम</h3>
+                    <span class="gallery-card-date">🗓️ 01 जनवरी 2025</span>
+                    <p class="gallery-card-desc">हजारों श्रद्धालुओं की उपस्थिति में पावन आशीर्वाद समारोह।</p>
+                  </div>
                 </div>
-                <div class="popup">
-                  <strong>अखंड एकता</strong>
-                  <p>संपूर्ण समाज के सहयोग व स्नेह ने इस उत्सव को सफल बनाया।</p>
+              </div>
+
+              <div class="gallery-card" onclick="openGalleryModal(7)">
+                <div class="gallery-card-inner">
+                  <span class="gallery-card-badge">दीपोत्सव</span>
+                  <img src="images/ESC01407.jpg" alt="अलौकिक दीपोत्सव" class="gallery-card-img" loading="lazy" />
+                  <div class="gallery-card-overlay">
+                    <h3 class="gallery-card-title">अलौकिक दीपोत्सव</h3>
+                    <span class="gallery-card-date">🗓️ 12 नवंबर 2024</span>
+                    <p class="gallery-card-desc">हजारों दीपों की दिव्य ज्योति से प्रज्वलित पावन मंदिर परिसर।</p>
+                  </div>
                 </div>
-              </article>
-              <article class="past-item">
-                <img src="https://images.unsplash.com/photo-1590076214667-c06d7e97a8e2?auto=format&fit=crop&w=700&q=80" alt="विश्वास पथ" />
-                <div class="content">
-                  <h3>विश्वास पथ</h3>
-                  <p>एक पावन आध्यात्मिक यात्रा जो श्रद्धालुओं के हृदय में बस गई।</p>
-                </div>
-                <div class="popup">
-                  <strong>सकारात्मक प्रभाव</strong>
-                  <p>अनेक साधकों ने आध्यात्मिक शांति और आत्म-संतोष पाया।</p>
-                </div>
-              </article>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Gallery Section -->
-      <section class="section" id="gallery">
-        <div class="container">
-          <div class="section-heading">
-            <h2>गैलरी</h2>
-            <p>दिव्य अनुष्ठानों और सेवा कार्यों की कुछ मनमोहक झलकियाँ।</p>
+      <!-- 8. Ultra-Premium Fullscreen Image Viewer Lightbox Modal -->
+      <div class="gallery-modal" id="galleryLightboxModal" onclick="closeGalleryModal(event)" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle">
+        <div class="gallery-modal-content" onclick="event.stopPropagation()">
+          
+          <!-- Topbar Controls -->
+          <div class="gallery-modal-topbar">
+            <div class="gallery-modal-zoom-controls">
+              <button class="modal-zoom-btn" onclick="zoomGalleryModal(0.25)" title="Zoom In ( + )" aria-label="Zoom In">
+                <i class="fa-solid fa-magnifying-glass-plus"></i>
+              </button>
+              <button class="modal-zoom-btn" onclick="zoomGalleryModal(-0.25)" title="Zoom Out ( − )" aria-label="Zoom Out">
+                <i class="fa-solid fa-magnifying-glass-minus"></i>
+              </button>
+              <button class="modal-zoom-btn reset-zoom-btn" onclick="resetGalleryZoom()" title="Reset Zoom ( 100% )" aria-label="Reset Zoom">
+                🔍 100%
+              </button>
+            </div>
+            <button class="gallery-modal-close" onclick="closeGalleryModal(event)" title="Close ( ESC )" aria-label="Close">&times;</button>
           </div>
-          <div class="gallery-marquee">
-            <div class="gallery-track">
-              <div class="gallery-card"><img src="https://images.unsplash.com/photo-1566908829744-8d4e92ec4a7a?auto=format&fit=crop&w=800&q=80" alt="गैलरी 1" /></div>
-              <div class="gallery-card"><img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=800&q=80" alt="गैलरी 2" /></div>
-              <div class="gallery-card"><img src="https://images.unsplash.com/photo-1590076214667-c06d7e97a8e2?auto=format&fit=crop&w=800&q=80" alt="गैलरी 3" /></div>
-              <div class="gallery-card"><img src="https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=800&q=80" alt="गैलरी 4" /></div>
-              <div class="gallery-card"><img src="https://images.unsplash.com/photo-1509789014768-a42e5bfba444?auto=format&fit=crop&w=800&q=80" alt="गैलरी 5" /></div>
-              <div class="gallery-card"><img src="https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80" alt="गैलरी 6" /></div>
-              <!-- Duplicate Set for Seamless Scrolling -->
-              <div class="gallery-card"><img src="https://images.unsplash.com/photo-1566908829744-8d4e92ec4a7a?auto=format&fit=crop&w=800&q=80" alt="गैलरी 1" /></div>
-              <div class="gallery-card"><img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=800&q=80" alt="गैलरी 2" /></div>
-              <div class="gallery-card"><img src="https://images.unsplash.com/photo-1590076214667-c06d7e97a8e2?auto=format&fit=crop&w=800&q=80" alt="गैलरी 3" /></div>
-              <div class="gallery-card"><img src="https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=800&q=80" alt="गैलरी 4" /></div>
+
+          <!-- Navigation Arrows -->
+          <button class="gallery-modal-nav prev-btn" onclick="navGalleryModal(-1)" title="Previous ( ← )" aria-label="Previous">❮</button>
+          <button class="gallery-modal-nav next-btn" onclick="navGalleryModal(1)" title="Next ( → )" aria-label="Next">❯</button>
+
+          <!-- Main Image Viewport (92–95% modal width) -->
+          <div class="gallery-modal-img-wrapper" id="galleryModalViewport">
+            <img src="" alt="" id="galleryModalImg" class="gallery-modal-img" />
+          </div>
+
+          <!-- Elegant Rounded Information Card -->
+          <div class="gallery-modal-info-card">
+            <div class="gallery-modal-info-header">
+              <h3 id="galleryModalTitle" class="gallery-modal-title"></h3>
+              <div id="galleryModalDate" class="gallery-modal-date-badge"></div>
+            </div>
+            <p id="galleryModalCaption" class="gallery-modal-caption"></p>
+            <div class="gallery-modal-info-footer">
+              <span id="galleryModalCounter" class="gallery-modal-counter"></span>
+              <span class="gallery-keyboard-hint">ESC Close • ← → Navigate • Mouse Wheel Zoom</span>
+            </div>
+          </div>
+
+          <!-- Horizontal Thumbnail Strip Navigation -->
+          <div class="gallery-modal-thumbnails" id="galleryModalThumbnails">
+            <!-- Dynamically populated thumbnails -->
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Section Divider -->
+      <div class="section-divider">
+        <img src="images/border_ornament.svg" alt="Divider" />
+      </div>
+
+      <!-- Trust Members Section (सदस्य) -->
+      <section class="section members-section" id="members">
+        <!-- Background Ornaments & Ambient Glow -->
+        <div class="members-bg-mandala mandala-left">
+          <img src="images/mandala.svg" alt="" />
+        </div>
+        <div class="members-bg-mandala mandala-right">
+          <img src="images/mandala.svg" alt="" />
+        </div>
+        <div class="members-ambient-glow"></div>
+
+        <div class="container">
+          <!-- Section Header -->
+          <div class="section-heading members-header">
+            <h2>हमारे सम्मानित सदस्य</h2>
+            <div class="members-header-divider">
+              <span class="divider-line"></span>
+              <img src="images/diya.svg" alt="Diya" class="divider-diya" />
+              <span class="divider-line"></span>
+            </div>
+            <p class="members-subtitle">
+              श्री नारायण नारायणी सेवा ट्रस्ट के सभी सम्मानित संरक्षक एवं आजीवन सदस्यों को हमारा सादर प्रणाम।
+            </p>
+          </div>
+
+          <!-- Animated Tabs -->
+          <div class="members-tabs-wrapper">
+            <button class="members-tab-btn active" data-tab="patron">
+              <span class="tab-icon">👑</span>
+              <span>संरक्षक सदस्य</span>
+              <span class="tab-badge">52</span>
+            </button>
+            <button class="members-tab-btn" data-tab="life">
+              <span class="tab-icon">🏵️</span>
+              <span>आजीवन सदस्य</span>
+              <span class="tab-badge">8</span>
+            </button>
+          </div>
+
+          <!-- Tab Content 1: Patron Members Carousel -->
+          <div class="members-tab-content active" id="patronTab">
+            <div class="members-carousel-wrapper" id="patronCarouselWrapper">
+              <button class="carousel-nav-btn prev-btn" id="patronPrev" aria-label="Previous Members">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <div class="carousel-track-container" id="patronTrackContainer">
+                <div class="carousel-track" id="patronTrack">
+                  <!-- Dynamically populated Patron Member Cards -->
+                </div>
+              </div>
+              <button class="carousel-nav-btn next-btn" id="patronNext" aria-label="Next Members">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+            <div class="carousel-dots-pagination" id="patronDots"></div>
+          </div>
+
+          <!-- Tab Content 2: Life Members Carousel -->
+          <div class="members-tab-content" id="lifeTab">
+            <div class="members-carousel-wrapper" id="lifeCarouselWrapper">
+              <button class="carousel-nav-btn prev-btn" id="lifePrev" aria-label="Previous Members">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <div class="carousel-track-container" id="lifeTrackContainer">
+                <div class="carousel-track" id="lifeTrack">
+                  <!-- Dynamically populated Life Member Cards -->
+                </div>
+              </div>
+              <button class="carousel-nav-btn next-btn" id="lifeNext" aria-label="Next Members">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+            <div class="carousel-dots-pagination" id="lifeDots"></div>
+          </div>
+
+          <!-- Elegant Transition Divider before Statistics -->
+          <div class="members-mid-divider">
+            <span class="mid-divider-line"></span>
+            <img src="images/lotus.svg" alt="Lotus" class="mid-divider-icon" />
+            <span class="mid-divider-line"></span>
+          </div>
+
+          <!-- Bottom Statistics Counters -->
+          <div class="members-stats-container">
+            <div class="members-stat-card">
+              <div class="members-stat-icon">👑</div>
+              <div class="members-stat-val" data-target="52">52</div>
+              <div class="members-stat-lbl">संरक्षक सदस्य</div>
+            </div>
+            <div class="members-stat-card">
+              <div class="members-stat-icon">🌸</div>
+              <div class="members-stat-val" data-target="8">8</div>
+              <div class="members-stat-lbl">आजीवन सदस्य</div>
+            </div>
+            <div class="members-stat-card">
+              <div class="members-stat-icon">🛕</div>
+              <div class="members-stat-val" data-target="60">60</div>
+              <div class="members-stat-lbl">कुल सदस्य</div>
+            </div>
+          </div>
+
+          <!-- Premium Devotional Closing Area -->
+          <div class="members-closing-area">
+            <div class="members-closing-divider">
+              <span class="closing-line"></span>
+              <img src="images/border_ornament.svg" alt="Ornament" class="closing-ornament" />
+              <span class="closing-line"></span>
+            </div>
+            <div class="members-quote-card">
+              <img src="images/diya.svg" alt="Diya" class="quote-diya-left" />
+              <p class="quote-text">
+                "आप सभी सम्मानित सदस्यों के अमूल्य सहयोग एवं विश्वास से ही यह सेवा कार्य निरंतर आगे बढ़ रहा है।"
+              </p>
+              <img src="images/diya.svg" alt="Diya" class="quote-diya-right" />
+            </div>
+            <div class="members-signature">
+              🪔 श्री नारायण नारायणी सेवा ट्रस्ट 🪔
             </div>
           </div>
         </div>
       </section>
+
+      <!-- Section Divider -->
+      <div class="section-divider">
+        <img src="images/border_ornament.svg" alt="Divider" />
+      </div>
 
       <!-- Contact & Developers Section -->
-      <section class="section" id="contact">
+      <section class="section contact-section" id="contact">
+        <!-- Subtle Devotional Corner Mandalas (<5% opacity) -->
+        <img src="images/mandala.svg" alt="" class="contact-bg-mandala mandala-left" aria-hidden="true" />
+        <img src="images/mandala.svg" alt="" class="contact-bg-mandala mandala-right" aria-hidden="true" />
+
         <div class="container">
           <div class="section-heading">
             <h2>संपर्क और विकासकर्ता</h2>
             <p>श्री नारायण नारायणी सेवा ट्रस्ट से जुड़ें और हमारे तकनीकी कलाकारों से मिलें।</p>
           </div>
           
-          <!-- Social Media Horizontal Segment -->
-          <div class="social-horizontal-row">
-            <a href="#" class="social-link-inline"><i class="fa-brands fa-facebook social-icon facebook-color"></i> फेसबुक</a>
-            <a href="#" class="social-link-inline"><i class="fa-brands fa-instagram social-icon instagram-color"></i> इंस्टाग्राम</a>
-            <a href="#" class="social-link-inline"><i class="fa-solid fa-envelope social-icon email-color"></i> ईमेल</a>
-            <a href="#" class="social-link-inline"><i class="fa-brands fa-youtube social-icon youtube-color"></i> यूट्यूब</a>
-            <a href="tel:+917605845283" class="phone-link-inline"><i class="fa-solid fa-phone"></i> +91 76058 45283</a>
+          <!-- Glass-like Social Contact Container -->
+          <div class="social-contact-container">
+            <div class="social-cards-grid">
+              <a href="https://www.facebook.com/share/1DWSkAxp2h/" class="social-card-btn" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook Page">
+                <span class="social-icon-wrapper facebook-bg"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></span>
+                <span class="social-card-label">फेसबुक</span>
+              </a>
+              <a href="https://www.instagram.com/shreenarayannarayanisevatrust1?igsh=MTJhaXpsaXcxaHVxMQ==" class="social-card-btn" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram">
+                <span class="social-icon-wrapper instagram-bg"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
+                <span class="social-card-label">इंस्टाग्राम</span>
+              </a>
+              <a href="mailto:shreenarayannarayanisevatrust1@gmail.com" class="social-card-btn" aria-label="Send us an Email">
+                <span class="social-icon-wrapper email-bg"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                <span class="social-card-label">ईमेल</span>
+              </a>
+              <a href="https://www.youtube.com/@shreenarayannarayanisevatr5268" class="social-card-btn" target="_blank" rel="noopener noreferrer" aria-label="Visit our YouTube Channel">
+                <span class="social-icon-wrapper youtube-bg"><i class="fa-brands fa-youtube" aria-hidden="true"></i></span>
+                <span class="social-card-label">यूट्यूब</span>
+              </a>
+              <a href="tel:+917605845283" class="social-card-btn phone-card-btn" aria-label="Call us at +91 76058 45283">
+                <span class="social-icon-wrapper phone-bg"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                <span class="social-card-label">+91 76058 45283</span>
+              </a>
+            </div>
           </div>
 
-          <!-- Developers Horizontal Micro Cards Segment -->
-          <div class="dev-micro-row">
-            <!-- Developer 1 Card -->
-            <div class="dev-card-micro">
-              <img src="images/developer/IMG_5408.jpeg" alt="Akhil Kumar Agrawal" class="dev-img-micro" />
-              <div class="dev-info-micro">
-                <h4>Akhil Kumar Agrawal</h4>
-                <span class="pill-micro">Frontend & UI/UX</span>
-                <p>UI/UX, React, HTML5/CSS3</p>
-                <a href="mailto:akhilme341@gmail.com" class="dev-mail-micro"><i class="fa-solid fa-envelope"></i> Email</a>
+          <!-- Developers Segment -->
+          <div class="developers-section-wrapper">
+            <div class="dev-heading-wrapper">
+              <h3 class="dev-section-title">Website Designed & Developed By</h3>
+              <div class="dev-title-divider">
+                <span class="dev-line"></span>
+                <img src="images/diya.svg" alt="Diya" class="dev-diya-icon" />
+                <span class="dev-line"></span>
               </div>
             </div>
 
-            <!-- Developer 2 Card -->
-            <div class="dev-card-micro">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=600&q=80" alt="Rohit Sen" class="dev-img-micro" />
-              <div class="dev-info-micro">
-                <h4>Rohit Sen</h4>
-                <span class="pill-micro">Backend & Full Stack</span>
-                <p>Node.js, API, Databases</p>
-                <a href="mailto:rohitsen.dev@gmail.com" class="dev-mail-micro"><i class="fa-solid fa-envelope"></i> Email</a>
+            <div class="dev-cards-grid">
+              <!-- Developer 1 Card -->
+              <div class="dev-card-premium">
+                <div class="dev-img-wrapper">
+                  <img src="images/developer/IMG_5408.jpeg" alt="Akhil Kumar Agrawal" class="dev-avatar" />
+                </div>
+                <div class="dev-info-content">
+                  <h4 class="dev-name">Akhil Kumar Agrawal</h4>
+                  <span class="dev-role">FRONTEND & UI/UX</span>
+                  <p class="dev-tech">UI/UX, React, HTML5/CSS3</p>
+                  <a href="mailto:akhilme341@gmail.com" class="dev-email-btn" aria-label="Email Akhil Kumar Agrawal">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
+                  </a>
+                </div>
+              </div>
+
+              <!-- Developer 2 Card -->
+              <div class="dev-card-premium">
+                <div class="dev-img-wrapper">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=600&q=80" alt="Ashish Kumar" class="dev-avatar" />
+                </div>
+                <div class="dev-info-content">
+                  <h4 class="dev-name">Ashish Kumar</h4>
+                  <span class="dev-role">FULL STACK DEVELOPER</span>
+                  <p class="dev-tech">Node.js, Express, API, Databases</p>
+                  <a href="mailto:ashishkeshri1735@gmail.com" class="dev-email-btn" aria-label="Email Ashish Kumar">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </main>
+      
+    <!-- Premium Devotional Footer -->
+    <footer class="footer-devotional" id="footer">
+      <!-- Low-Opacity Background Mandala Overlay (1% opacity) -->
+      <img src="images/mandala.svg" alt="" class="footer-bg-mandala mandala-left" aria-hidden="true" />
+      <img src="images/mandala.svg" alt="" class="footer-bg-mandala mandala-right" aria-hidden="true" />
 
-    <footer class="footer">
-      <div class="container footer-inner">
-        <span>© 2026 श्री नारायण नारायणी सेवा ट्रस्ट</span>
-        <span>Regd u/s 80G | जन कल्याणार्थ समर्पित</span>
+      <!-- Extended Top Golden Decorative Divider -->
+      <div class="footer-top-divider">
+        <span class="footer-line"></span>
+        <img src="images/diya.svg" alt="Diya" class="footer-diya-top" />
+        <span class="footer-line"></span>
+      </div>
+
+      <div class="container footer-main-container">
+        <div class="footer-grid">
+          
+          <!-- Column 1: Trust Logo, Name & Mission -->
+          <div class="footer-col footer-brand-col footer-col-stagger" style="--stagger-delay: 0.1s;">
+            <div class="footer-brand-header">
+              <img src="images/logo.jpeg" alt="Shri Narayan Narayani Seva Trust Logo" class="footer-logo" />
+              <h3 class="footer-trust-name">श्री नारायण नारायणी सेवा ट्रस्ट</h3>
+            </div>
+            <p class="footer-mission-text">
+              श्री नारायण नारायणी सेवा ट्रस्ट समाज सेवा, धर्म प्रचार, गौ सेवा और असहायों की सहायता के पावन उद्देश्य को समर्पित एक धार्मिक एवं सामाजिक संस्था है।
+            </p>
+          </div>
+
+          <!-- Column 2: Quick Links (मुख्य लिंक) -->
+          <div class="footer-col footer-links-col footer-col-stagger" style="--stagger-delay: 0.2s;">
+            <h4 class="footer-col-title">मुख्य लिंक</h4>
+            <div class="footer-title-underline"></div>
+            <ul class="footer-links-list">
+              <li><a href="#home"><span class="devotional-bullet">❖</span> मुख्य पृष्ठ (Home)</a></li>
+              <li><a href="#about"><span class="devotional-bullet">❖</span> हमारे बारे में (About)</a></li>
+              <li><a href="#events"><span class="devotional-bullet">❖</span> आगामी कार्यक्रम (Upcoming Events)</a></li>
+              <li><a href="#past-events"><span class="devotional-bullet">❖</span> विगत कार्यक्रम (Previous Events)</a></li>
+              <li><a href="#gallery"><span class="devotional-bullet">❖</span> गैलरी (Gallery)</a></li>
+              <li><a href="#members"><span class="devotional-bullet">❖</span> सदस्य (Members)</a></li>
+              <li><a href="#contact"><span class="devotional-bullet">❖</span> संपर्क (Contact & Developers)</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Contact Information (संपर्क जानकारी) -->
+          <div class="footer-col footer-contact-col footer-col-stagger" style="--stagger-delay: 0.3s;">
+            <h4 class="footer-col-title">संपर्क विवरण</h4>
+            <div class="footer-title-underline"></div>
+            <ul class="footer-contact-list">
+              <li>
+                <span class="contact-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                <span>हावड़ा, पश्चिम बंगाल, भारत</span>
+              </li>
+              <li>
+                <span class="contact-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></span>
+                <a href="tel:+917605845283">+91 76058 45283</a>
+              </li>
+              <li>
+                <span class="contact-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                <a href="mailto:shreenarayannarayanisevatrust1@gmail.com">shreenarayannarayanisevatrust1@gmail.com</a>
+              </li>
+              <li>
+                <span class="contact-icon"><i class="fa-solid fa-globe" aria-hidden="true"></i></span>
+                <a href="http://localhost:8000" target="_blank" rel="noopener noreferrer" class="footer-url-link">shreenarayannarayanisevatrust.org</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Social Media Links (सोशल मीडिया) -->
+          <div class="footer-col footer-social-col footer-col-stagger" style="--stagger-delay: 0.4s;">
+            <h4 class="footer-col-title">सोशल मीडिया</h4>
+            <div class="footer-title-underline"></div>
+            <p class="footer-social-desc">हमारे सोशल मीडिया प्लेटफॉर्म्स से जुड़ें और धार्मिक गतिविधियों का हिस्सा बनें।</p>
+            <div class="footer-social-icons">
+              <a href="https://www.facebook.com/share/1DWSkAxp2h/" class="footer-social-btn facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com/shreenarayannarayanisevatrust1?igsh=MTJhaXpsaXcxaHVxMQ==" class="footer-social-btn instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.youtube.com/@shreenarayannarayanisevatr5268" class="footer-social-btn youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:shreenarayannarayanisevatrust1@gmail.com" class="footer-social-btn email" aria-label="Email">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Devotional Phrase with Glowing Diya -->
+        <div class="footer-devotional-phrase">
+          <span class="phrase-line"></span>
+          <h4 class="phrase-text">🪔 जय दादी की 🪔</h4>
+          <span class="phrase-line"></span>
+        </div>
+
+        <!-- Bottom Separator & Copyright Bar -->
+        <div class="footer-bottom-bar">
+          <p class="copyright-text">
+            <span class="copyright-gold">© 2026</span> <span class="trust-name-white">Shri Narayan Narayani Seva Trust.</span> <span class="rights-reserved-subtle">All Rights Reserved.</span>
+          </p>
+          <p class="developer-credit-text">
+            <span class="dev-prefix-white">Website Designed & Developed By</span> <a href="#contact" class="dev-name-link">Ashish Kumar</a> <span class="dev-amp">&</span> <a href="#contact" class="dev-name-link">Akhil Kumar Agrawal</a>
+          </p>
+        </div>
       </div>
     </footer>
+
+    <!-- Floating Scroll To Top Button -->
+    <button class="scroll-to-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="fa-solid fa-arrow-up-long" aria-hidden="true"></i>
+    </button>
+
+    <!-- Script to handle navbar scroll states & Hero interactive effects -->
+    <script>
+      // 3-state Navbar transition (Transparent Maroon -> Glass Maroon -> Solid Maroon after 100px)
+      function updateNavbarState() {
+        const topbar = document.querySelector('.topbar');
+        if (!topbar) return;
+        const scrollY = window.scrollY;
+
+        if (scrollY > 100) {
+          topbar.classList.add('scrolled-solid', 'scrolled');
+          topbar.classList.remove('scrolled-glass');
+        } else if (scrollY > 20) {
+          topbar.classList.add('scrolled-glass', 'scrolled');
+          topbar.classList.remove('scrolled-solid');
+        } else {
+          topbar.classList.remove('scrolled-glass', 'scrolled-solid', 'scrolled');
+        }
+      }
+
+      window.addEventListener('scroll', updateNavbarState);
+      window.addEventListener('load', updateNavbarState);
+
+      // High-Precision Scroll Spy System (with Footer -> #contact mapping)
+      (function initScrollSpy() {
+        const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+        if (!navLinks.length) return;
+
+        const targetSections = [
+          document.getElementById('home'),
+          document.getElementById('about'),
+          document.getElementById('events'),
+          document.getElementById('past'),
+          document.getElementById('gallery'),
+          document.getElementById('members'),
+          document.getElementById('contact'),
+          document.getElementById('footer')
+        ].filter(Boolean);
+
+        function updateActiveNav(targetSectionId) {
+          // The footer is considered part of Contact & Developers (#contact)
+          const activeId = (targetSectionId === 'footer') ? 'contact' : targetSectionId;
+
+          navLinks.forEach(link => {
+            const href = link.getAttribute('href').replace('#', '');
+            if (href === activeId) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+
+        let isTicking = false;
+
+        function checkActiveSection() {
+          const scrollY = window.scrollY;
+          const windowHeight = window.innerHeight;
+          const documentHeight = document.documentElement.scrollHeight;
+
+          // If scrolled near the bottom of the page or into footer, activate 'contact'
+          if (scrollY + windowHeight >= documentHeight - 120) {
+            updateActiveNav('contact');
+            return;
+          }
+
+          // Offset to trigger section activation when scrolled ~140px from top
+          const scrollOffset = scrollY + 140;
+          let currentSectionId = targetSections[0] ? targetSections[0].id : 'home';
+
+          for (let i = 0; i < targetSections.length; i++) {
+            const sec = targetSections[i];
+            const top = sec.offsetTop;
+            const height = sec.offsetHeight;
+
+            if (scrollOffset >= top && scrollOffset < top + height) {
+              currentSectionId = sec.id;
+              break;
+            }
+          }
+
+          updateActiveNav(currentSectionId);
+        }
+
+        window.addEventListener('scroll', () => {
+          if (!isTicking) {
+            window.requestAnimationFrame(() => {
+              checkActiveSection();
+              isTicking = false;
+            });
+            isTicking = true;
+          }
+        }, { passive: true });
+
+        // Smooth scroll handling for nav links
+        navLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href').replace('#', '');
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+              e.preventDefault();
+              updateActiveNav(targetId);
+
+              const navbarOffset = 70;
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.scrollY - navbarOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+
+        window.addEventListener('load', checkActiveSection);
+        checkActiveSection();
+      })();
+
+      // Floating Scroll To Top Button Logic
+      (function initScrollTopBtn() {
+        const btn = document.getElementById('scrollTopBtn');
+        if (!btn) return;
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 300) {
+            btn.classList.add('visible');
+          } else {
+            btn.classList.remove('visible');
+          }
+        });
+
+        btn.addEventListener('click', () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      })();
+
+      // Hero Carousel Auto-rotation & Ken Burns resetting
+      (function initHeroCarousel() {
+        const slides = document.querySelectorAll('.hero-slide');
+        if (!slides.length) return;
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        const slideInterval = 8000; // 8 seconds per image
+
+        function showNextSlide() {
+          slides[currentSlide].classList.remove('active');
+          currentSlide = (currentSlide + 1) % totalSlides;
+          slides[currentSlide].classList.add('active');
+        }
+
+        setInterval(showNextSlide, slideInterval);
+      })();
+
+      // Hero Mouse Parallax Effect (Max 3px movement)
+      (function initHeroParallax() {
+        const hero = document.getElementById('home');
+        const card = document.getElementById('heroGlassCard');
+        if (!hero || !card) return;
+
+        let mouseX = 0, mouseY = 0;
+        let targetX = 0, targetY = 0;
+
+        hero.addEventListener('mousemove', (e) => {
+          const rect = hero.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+          
+          // Calculate movement constrained to max 3px
+          targetX = ((e.clientX - centerX) / (rect.width / 2)) * 3;
+          targetY = ((e.clientY - centerY) / (rect.height / 2)) * 3;
+        });
+
+        hero.addEventListener('mouseleave', () => {
+          targetX = 0;
+          targetY = 0;
+        });
+
+        function updateParallax() {
+          mouseX += (targetX - mouseX) * 0.1;
+          mouseY += (targetY - mouseY) * 0.1;
+          
+          card.style.transform = `translate3d(${mouseX.toFixed(2)}px, ${mouseY.toFixed(2)}px, 0)`;
+          requestAnimationFrame(updateParallax);
+        }
+
+        updateParallax();
+      })();
+
+      // Statistics Count-Up Counter Animation
+      (function initHeroCounters() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let animated = false;
+
+        function animateCounters() {
+          if (animated) return;
+          animated = true;
+
+          statNumbers.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-target'), 10);
+            const suffix = stat.getAttribute('data-suffix') || '';
+            if (isNaN(target)) return;
+
+            const duration = 2000; // 2 seconds
+            const startTime = performance.now();
+
+            function updateCount(currentTime) {
+              const elapsedTime = currentTime - startTime;
+              const progress = Math.min(elapsedTime / duration, 1);
+              // Ease-out cubic formula
+              const easeProgress = 1 - Math.pow(1 - progress, 3);
+              const currentVal = Math.floor(easeProgress * target);
+
+              stat.textContent = currentVal.toLocaleString() + suffix;
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCount);
+              } else {
+                stat.textContent = target.toLocaleString() + suffix;
+              }
+            }
+
+            requestAnimationFrame(updateCount);
+          });
+        }
+
+        // Trigger on load after timeline animation reaches stats (2.1s)
+        setTimeout(animateCounters, 1600);
+      })();
+
+      // ScrollSpy active link highlighting
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-links a');
+
+      function scrollSpy() {
+        let current = 'home';
+        const scrollPosition = window.scrollY + 150; // Offset for sticky navbar
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            const id = section.getAttribute('id');
+            if (id) {
+              current = id;
+            }
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', scrollSpy);
+      window.addEventListener('load', scrollSpy);
+      window.addEventListener('hashchange', scrollSpy);
+
+      // ==========================================
+      // Trust Members Section (Tabs, Carousel & Stats)
+      // ==========================================
+      (function initTrustMembersSection() {
+        const patronMembersData = [
+          "Chandra Prakash Ji Tulsyan", "Sunil Ji Agarwal", "Vikash Ji Agarwal", "Gopal Ji Poddar",
+          "Kamal Ji Bagaria", "Manish Ji Fogla", "Arun Ji Bhuwalka", "Giriwar Ji Tamakhuwala",
+          "Rajesh Kumar Ji Fitkariwala", "Sunil Ji Bhuwalka", "Rahul Ji Bhuwalka", "Peeyush Ji Bhuwalka",
+          "Shankar Ji Bachuka", "Jyoti Ji Bachuka", "Uttam Ji Agarwal", "Shiv Ji Agarwal",
+          "Murari Ji Agarwal", "Narender Ji Bansal", "Rohit Ji Sarawgi", "Yogesh Ji Gupta",
+          "Binod Ji Agarwal", "Pradeep Ji Sanghai", "Dhirendra Ji Agarwal", "Bina Ji Jhunjhunwala",
+          "Anita Ji Gupta Makaria", "Pushpa Ji Tibrewal", "Ekta Ji Kejriwal", "Sunny Ji Agarwal",
+          "Urmila Ji Agarwal", "Amita Ji Agarwal", "Sunita Ji Bhalotia", "Anjani Ji Sureka",
+          "Sneha Ji Bhuwalka", "Kavita Ji Parasramka", "Surendra Ji Jhunjhunwala", "Manoj Ji Agarwal",
+          "Biswanath Ji Jaluka", "Binod Ji Agarwal", "Ritesh Ji Agarwal", "Manoj Ji Agarwal",
+          "Ashish Ji Choudhary", "Anand Ji Sharma", "Sanjay Ji Agarwal", "Saroj Ji Jalan",
+          "Ajit Ji Ghorai", "Jai Prakash Ji Agarwal", "Preksha Ji Bachhawat", "Rajni Ji Choudhary",
+          "Rinki Ji Agarwal", "Pravin Ji Agarwal", "Nishit Ji Jhunjhunwala", "Kishan Ji Daruka"
+        ];
+
+        const lifeMembersData = [
+          "Briddhi Ji Agarwal", "Subhash Kumar Ji Saraf", "Harshvardhan Ji Rajgarhia",
+          "Shalu Ji Madhogharia", "Pinky Ji Kanodia", "Sudha Ji Choudhary",
+          "Kusum Ji Poddar", "Bina Ji Bhuwalka"
+        ];
+
+        function renderMemberCards(trackId, memberList, typeLabel) {
+          const track = document.getElementById(trackId);
+          if (!track) return;
+          track.innerHTML = memberList.map((name) => {
+            return `
+              <div class="member-card">
+                <div class="member-emblem-box">
+                  <img src="images/lotus.svg" alt="Emblem" class="member-emblem-img" />
+                </div>
+                <h3 class="member-name">${name}</h3>
+                <span class="member-type-tag">${typeLabel}</span>
+              </div>
+            `;
+          }).join('');
+        }
+
+        const activeCarousels = {};
+
+        function setupCarousel(trackId, prevBtnId, nextBtnId, dotsId) {
+          const track = document.getElementById(trackId);
+          const prevBtn = document.getElementById(prevBtnId);
+          const nextBtn = document.getElementById(nextBtnId);
+          const dotsContainer = document.getElementById(dotsId);
+          if (!track || !prevBtn || !nextBtn) return;
+
+          if (activeCarousels[trackId] && activeCarousels[trackId].stopAutoplay) {
+            activeCarousels[trackId].stopAutoplay();
+          }
+
+          let currentIndex = 0;
+          let isDragging = false;
+          let startX = 0;
+          let autoplayTimer = null;
+
+          function getVisibleCards() {
+            const width = window.innerWidth;
+            if (width < 768) return 1;
+            if (width < 1024) return 3;
+            return 5;
+          }
+
+          function getMaxIndex() {
+            const cards = track.querySelectorAll('.member-card');
+            const visible = getVisibleCards();
+            return Math.max(0, cards.length - visible);
+          }
+
+          function updateDots() {
+            if (!dotsContainer) return;
+            const maxIdx = getMaxIndex();
+            const totalDots = maxIdx + 1;
+            dotsContainer.innerHTML = '';
+            if (totalDots <= 1) return;
+
+            for (let i = 0; i < totalDots; i++) {
+              const dot = document.createElement('span');
+              dot.className = `carousel-dot ${i === currentIndex ? 'active' : ''}`;
+              dot.addEventListener('click', () => {
+                currentIndex = i;
+                slide();
+                resetAutoplay();
+              });
+              dotsContainer.appendChild(dot);
+            }
+          }
+
+          function slide() {
+            const cards = track.querySelectorAll('.member-card');
+            if (!cards.length) return;
+            const visible = getVisibleCards();
+            const cardWidth = cards[0].getBoundingClientRect().width;
+            const gap = 20;
+            const moveAmount = (cardWidth + gap) * currentIndex;
+            track.style.transform = `translate3d(-${moveAmount}px, 0, 0)`;
+            updateDots();
+          }
+
+          function prev() {
+            const maxIdx = getMaxIndex();
+            currentIndex = currentIndex > 0 ? currentIndex - 1 : maxIdx;
+            slide();
+          }
+
+          function next() {
+            const maxIdx = getMaxIndex();
+            currentIndex = currentIndex < maxIdx ? currentIndex + 1 : 0;
+            slide();
+          }
+
+          prevBtn.onclick = () => { prev(); resetAutoplay(); };
+          nextBtn.onclick = () => { next(); resetAutoplay(); };
+
+          // Mouse Drag
+          track.onmousedown = (e) => {
+            isDragging = true;
+            startX = e.pageX;
+          };
+
+          window.onmousemove = (e) => {
+            if (!isDragging) return;
+            const diff = e.pageX - startX;
+            if (Math.abs(diff) > 40) {
+              isDragging = false;
+              if (diff > 0) prev();
+              else next();
+              resetAutoplay();
+            }
+          };
+
+          window.onmouseup = () => { isDragging = false; };
+
+          // Touch events
+          track.ontouchstart = (e) => { startX = e.touches[0].clientX; };
+          track.ontouchend = (e) => {
+            const diff = e.changedTouches[0].clientX - startX;
+            if (Math.abs(diff) > 35) {
+              if (diff > 0) prev();
+              else next();
+              resetAutoplay();
+            }
+          };
+
+          function startAutoplay() {
+            stopAutoplay();
+            autoplayTimer = setInterval(next, 4500);
+          }
+
+          function stopAutoplay() {
+            if (autoplayTimer) clearInterval(autoplayTimer);
+          }
+
+          function resetAutoplay() {
+            stopAutoplay();
+            startAutoplay();
+          }
+
+          track.onmouseenter = stopAutoplay;
+          track.onmouseleave = startAutoplay;
+
+          window.onresize = () => {
+            if (currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
+            slide();
+          };
+
+          activeCarousels[trackId] = { stopAutoplay };
+          slide();
+          startAutoplay();
+        }
+
+        renderMemberCards('patronTrack', patronMembersData, 'संरक्षक सदस्य');
+        renderMemberCards('lifeTrack', lifeMembersData, 'आजीवन सदस्य');
+
+        setupCarousel('patronTrack', 'patronPrev', 'patronNext', 'patronDots');
+
+        // Tab Switching
+        const tabBtns = document.querySelectorAll('.members-tab-btn');
+        const tabContents = document.querySelectorAll('.members-tab-content');
+
+        tabBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+
+            btn.classList.add('active');
+            const targetTab = btn.getAttribute('data-tab');
+            const targetContent = document.getElementById(`${targetTab}Tab`);
+            if (targetContent) {
+              targetContent.classList.add('active');
+              setupCarousel(`${targetTab}Track`, `${targetTab}Prev`, `${targetTab}Next`, `${targetTab}Dots`);
+            }
+          });
+        });
+
+        // Counter Animation on Scroll Intersection
+        const membersSection = document.getElementById('members');
+        if (membersSection) {
+          let countAnimated = false;
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting && !countAnimated) {
+                countAnimated = true;
+                const statVals = membersSection.querySelectorAll('.members-stat-val');
+                statVals.forEach(valEl => {
+                  const target = parseInt(valEl.getAttribute('data-target'), 10);
+                  if (isNaN(target)) return;
+                  let current = 0;
+                  const step = Math.max(1, Math.ceil(target / 40));
+                  const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                      current = target;
+                      clearInterval(timer);
+                    }
+                    valEl.textContent = current;
+                  }, 30);
+                });
+              }
+            });
+          }, { threshold: 0.2 });
+
+          observer.observe(membersSection);
+        }
+      })();
+
+      // Handle mailto links inside sandboxed environments (like Streamlit iframes)
+      document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (window.self !== window.top) {
+            window.open(link.href, '_blank');
+            e.preventDefault();
+          }
+        });
+      });
+
+      // Seamless Continuous Infinite Carousel for Gallery Section
+      (function initGalleryMarquee() {
+        function setupTrack() {
+          const wrapper = document.querySelector('.gallery-wrapper');
+          const track = document.querySelector('.gallery-track');
+          if (!wrapper || !track) return;
+
+          let currentX = 0;
+          let isHovered = false;
+          const speed = 0.8; // Constant smooth speed (pixels per frame)
+
+          function getSingleSetWidth() {
+            const items = track.querySelectorAll('.gallery-img');
+            if (items.length >= 12) {
+              // Exact distance between Set 1 Image 1 and Set 2 Image 1
+              return items[6].offsetLeft - items[0].offsetLeft;
+            }
+            return track.scrollWidth / 3;
+          }
+
+          let singleSetWidth = getSingleSetWidth();
+
+          function recalculateWidth() {
+            singleSetWidth = getSingleSetWidth();
+          }
+
+          window.addEventListener('resize', recalculateWidth);
+          window.addEventListener('load', recalculateWidth);
+
+          wrapper.addEventListener('mouseenter', () => { isHovered = true; });
+          wrapper.addEventListener('mouseleave', () => { isHovered = false; });
+          wrapper.addEventListener('touchstart', () => { isHovered = true; }, { passive: true });
+          wrapper.addEventListener('touchend', () => { isHovered = false; }, { passive: true });
+
+          function step() {
+            if (!isHovered && singleSetWidth > 0) {
+              currentX -= speed;
+              if (Math.abs(currentX) >= singleSetWidth) {
+                currentX += singleSetWidth; // Silent subpixel position offset
+              }
+              track.style.transform = `translate3d(${currentX}px, 0, 0)`;
+            }
+            requestAnimationFrame(step);
+          }
+
+          requestAnimationFrame(step);
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', setupTrack);
+        } else {
+          setupTrack();
+        }
+      })();
+    </script>
+
+    <!-- About Section Animated Counters Script -->
+    <script>
+      (function() {
+        function initAboutCounters() {
+          const statNumbers = document.querySelectorAll('.stat-number');
+          if (!statNumbers.length) return;
+
+          const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = parseInt(el.getAttribute('data-target'), 10);
+                if (isNaN(target)) return;
+                let startTime = null;
+                const duration = 2000;
+
+                function updateCounter(timestamp) {
+                  if (!startTime) startTime = timestamp;
+                  const elapsed = timestamp - startTime;
+                  const progress = Math.min(elapsed / duration, 1);
+                  const easeOut = progress * (2 - progress);
+                  const current = Math.floor(easeOut * target);
+                  el.textContent = current;
+                  if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                  } else {
+                    el.textContent = target;
+                  }
+                }
+                requestAnimationFrame(updateCounter);
+                obs.unobserve(el);
+              }
+            });
+          }, { threshold: 0.2 });
+
+          statNumbers.forEach(num => observer.observe(num));
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initAboutCounters);
+        } else {
+          initAboutCounters();
+        }
+      })();
+    </script>
+
+    <!-- Poster Lightbox Modal & Countdown Timer Script -->
+    <script>
+      function openPosterModal() {
+        const modal = document.getElementById('posterModal');
+        if (modal) {
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+      function closePosterModal(e) {
+        if (e) e.stopPropagation();
+        const modal = document.getElementById('posterModal');
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closePosterModal(e);
+      });
+
+      // Live Devotional Countdown Timer (23 August 2026, 11:00 AM IST)
+      function initDevotionalCountdown() {
+        const eventDate = new Date('2026-08-23T11:00:00+05:30').getTime();
+        const daysEl = document.getElementById('cdDays');
+        const hoursEl = document.getElementById('cdHours');
+        const minutesEl = document.getElementById('cdMinutes');
+        const secondsEl = document.getElementById('cdSeconds');
+        const boxesEl = document.getElementById('countdownBoxes');
+        const expiredEl = document.getElementById('countdownExpired');
+
+        function updateTimer() {
+          const now = new Date().getTime();
+          const diff = eventDate - now;
+
+          if (diff <= 0) {
+            if (boxesEl) boxesEl.style.display = 'none';
+            if (expiredEl) expiredEl.style.display = 'block';
+            return;
+          }
+
+          const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+          if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+          if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+          if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+          if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+        }
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initDevotionalCountdown);
+      } else {
+        initDevotionalCountdown();
+      }
+    </script>
+
+    <!-- Ultra-Premium Devotional Gallery Lightbox Script -->
+    <script>
+      const galleryData = [
+        { src: "images/img1.jpg", badge: "महामंगलपाठ", title: "३१०० महिला महामंगलपाठ", date: "23 August 2026", desc: "३१०० महिलाओं द्वारा आयोजित भव्य आध्यात्मिक आयोजन।" },
+        { src: "images/img2.jpg", badge: "दिव्य महाआरती", title: "श्री रानी सती दादीजी महाआरती", date: "15 जनवरी 2026", desc: "प्रज्वलित दीपों एवं शंखध्वनि के साथ दादीजी की अलौकिक आरती।" },
+        { src: "images/img3.jpg", badge: "भजन संध्या", title: "भव्य भक्ति व भजन संध्या", date: "10 नवंबर 2025", desc: "सुप्रसिद्ध भजन गायकों द्वारा सुमधुर भजनों की अविरल पावन धारा।" },
+        { src: "images/img4.jpg", badge: "पुष्प वर्षा", title: "दिव्य पुष्प वृष्टि उत्सव", date: "05 सितंबर 2025", desc: "दादीजी के पावन दरबार में अपार पुष्प वर्षा एवं संकीर्तन।" },
+        { src: "images/img5.jpg", badge: "भंडारा सेवा", title: "मानव सेवा एवं महाप्रसाद", date: "14 अप्रैल 2025", desc: "हजारों श्रद्धालुओं के बीच निस्वार्थ भाव से महाप्रसाद वितरण।" },
+        { src: "images/img 6.jpg", badge: "सांस्कृतिक", title: "सनातन संस्कार व सांस्कृतिक पर्व", date: "26 जनवरी 2025", desc: "सनातन संस्कृति एवं भारतीय आध्यात्मिक परंपराओं का महोत्सव।" },
+        { src: "images/DSC06989.jpg", badge: "श्रद्धालु समागम", title: "विशाल भक्त समागम", date: "01 जनवरी 2025", desc: "हजारों श्रद्धालुओं की उपस्थिति में पावन आशीर्वाद समारोह।" },
+        { src: "images/ESC01407.jpg", badge: "दीपोत्सव", title: "अलौकिक दीपोत्सव", date: "12 नवंबर 2024", desc: "हजारों दीपों की दिव्य ज्योति से प्रज्वलित पावन मंदिर परिसर।" }
+      ];
+
+      let currentGalleryIdx = 0;
+      let modalZoomLevel = 1.0;
+      let panX = 0;
+      let panY = 0;
+      let isDragging = false;
+      let startX = 0;
+      let startY = 0;
+
+      function initGalleryThumbnails() {
+        const container = document.getElementById('galleryModalThumbnails');
+        if (!container) return;
+        container.innerHTML = galleryData.map((item, i) => `
+          <div class="thumb-item ${i === currentGalleryIdx ? 'active' : ''}" onclick="selectGalleryThumb(${i})">
+            <img src="${item.src}" alt="${item.title}" loading="lazy" />
+          </div>
+        `).join('');
+      }
+
+      function selectGalleryThumb(index) {
+        currentGalleryIdx = index;
+        resetGalleryZoom();
+        updateGalleryModalContent();
+      }
+
+      function openGalleryModal(index) {
+        currentGalleryIdx = index;
+        resetGalleryZoom();
+        initGalleryThumbnails();
+        updateGalleryModalContent();
+        const modal = document.getElementById('galleryLightboxModal');
+        if (modal) {
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function preloadAdjacentGalleryImages() {
+        if (!galleryData || !galleryData.length) return;
+        const prevIdx = (currentGalleryIdx - 1 + galleryData.length) % galleryData.length;
+        const nextIdx = (currentGalleryIdx + 1) % galleryData.length;
+        const imgPrev = new Image();
+        imgPrev.src = galleryData[prevIdx].src;
+        const imgNext = new Image();
+        imgNext.src = galleryData[nextIdx].src;
+      }
+
+      function updateGalleryModalContent() {
+        const item = galleryData[currentGalleryIdx];
+        const imgEl = document.getElementById('galleryModalImg');
+        const titleEl = document.getElementById('galleryModalTitle');
+        const dateEl = document.getElementById('galleryModalDate');
+        const captionEl = document.getElementById('galleryModalCaption');
+        const counterEl = document.getElementById('galleryModalCounter');
+
+        if (imgEl) {
+          imgEl.style.opacity = '0';
+          imgEl.style.transform = `translate(${panX}px, ${panY}px) scale(${modalZoomLevel * 0.98})`;
+          setTimeout(() => {
+            imgEl.src = item.src;
+            imgEl.alt = item.title;
+            applyZoomTransform();
+            imgEl.style.opacity = '1';
+          }, 130);
+        }
+        if (titleEl) titleEl.textContent = item.title;
+        if (dateEl) dateEl.innerHTML = `<span class="gallery-date-pill">🗓️ ${item.date}</span>`;
+        if (captionEl) captionEl.textContent = item.desc;
+        if (counterEl) counterEl.textContent = `${currentGalleryIdx + 1} / ${galleryData.length}`;
+
+        // Highlight active thumbnail & scroll to center smoothly
+        const thumbs = document.querySelectorAll('.thumb-item');
+        thumbs.forEach((thumb, i) => {
+          thumb.classList.toggle('active', i === currentGalleryIdx);
+          if (i === currentGalleryIdx) {
+            thumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }
+        });
+
+        preloadAdjacentGalleryImages();
+      }
+
+      function navGalleryModal(direction) {
+        currentGalleryIdx = (currentGalleryIdx + direction + galleryData.length) % galleryData.length;
+        resetGalleryZoom();
+        updateGalleryModalContent();
+      }
+
+      function closeGalleryModal(e) {
+        if (e) e.stopPropagation();
+        const modal = document.getElementById('galleryLightboxModal');
+        if (modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+          resetGalleryZoom();
+        }
+      }
+
+      /* Zoom & Pan Functions */
+      function applyZoomTransform() {
+        const imgEl = document.getElementById('galleryModalImg');
+        if (!imgEl) return;
+        imgEl.style.transform = `translate(${panX}px, ${panY}px) scale(${modalZoomLevel})`;
+        imgEl.style.cursor = modalZoomLevel > 1.0 ? 'grab' : 'default';
+      }
+
+      function zoomGalleryModal(delta) {
+        modalZoomLevel = Math.min(Math.max(1.0, modalZoomLevel + delta), 3.0);
+        if (modalZoomLevel === 1.0) {
+          panX = 0;
+          panY = 0;
+        }
+        applyZoomTransform();
+      }
+
+      function resetGalleryZoom() {
+        modalZoomLevel = 1.0;
+        panX = 0;
+        panY = 0;
+        applyZoomTransform();
+      }
+
+      // Mouse Wheel Zoom & Drag Pan
+      document.addEventListener('DOMContentLoaded', function() {
+        const viewport = document.getElementById('galleryModalViewport');
+        if (viewport) {
+          viewport.addEventListener('wheel', function(e) {
+            e.preventDefault();
+            const delta = e.deltaY < 0 ? 0.25 : -0.25;
+            zoomGalleryModal(delta);
+          }, { passive: false });
+
+          viewport.addEventListener('mousedown', function(e) {
+            if (modalZoomLevel > 1.0) {
+              isDragging = true;
+              startX = e.clientX - panX;
+              startY = e.clientY - panY;
+              const imgEl = document.getElementById('galleryModalImg');
+              if (imgEl) imgEl.style.cursor = 'grabbing';
+            }
+          });
+
+          window.addEventListener('mousemove', function(e) {
+            if (isDragging && modalZoomLevel > 1.0) {
+              panX = e.clientX - startX;
+              panY = e.clientY - startY;
+              applyZoomTransform();
+            }
+          });
+
+          window.addEventListener('mouseup', function() {
+            if (isDragging) {
+              isDragging = false;
+              const imgEl = document.getElementById('galleryModalImg');
+              if (imgEl && modalZoomLevel > 1.0) imgEl.style.cursor = 'grab';
+            }
+          });
+        }
+      });
+
+      // Keyboard Listeners
+      document.addEventListener('keydown', function(e) {
+        const modal = document.getElementById('galleryLightboxModal');
+        if (modal && modal.classList.contains('active')) {
+          if (e.key === 'Escape') closeGalleryModal(e);
+          if (e.key === 'ArrowLeft') navGalleryModal(-1);
+          if (e.key === 'ArrowRight') navGalleryModal(1);
+          if (e.key === '+' || e.key === '=') zoomGalleryModal(0.25);
+          if (e.key === '-' || e.key === '_') zoomGalleryModal(-0.25);
+        }
+      });
+
+      // Touch Swipe, Pinch & Double Tap Zoom Support
+      let touchStartX = 0;
+      let touchEndX = 0;
+      let lastTapTime = 0;
+      let initialPinchDist = 0;
+
+      const modalEl = document.getElementById('galleryLightboxModal');
+      if (modalEl) {
+        modalEl.addEventListener('touchstart', function(e) {
+          if (e.touches.length === 1) {
+            touchStartX = e.touches[0].screenX;
+            const now = new Date().getTime();
+            if (now - lastTapTime < 300) {
+              if (modalZoomLevel > 1.0) resetGalleryZoom();
+              else zoomGalleryModal(1.0); // Double tap zooms to 2.0x
+            }
+            lastTapTime = now;
+          } else if (e.touches.length === 2) {
+            initialPinchDist = Math.hypot(
+              e.touches[0].pageX - e.touches[1].pageX,
+              e.touches[0].pageY - e.touches[1].pageY
+            );
+          }
+        }, { passive: true });
+
+        modalEl.addEventListener('touchmove', function(e) {
+          if (e.touches.length === 2 && initialPinchDist > 0) {
+            const currentDist = Math.hypot(
+              e.touches[0].pageX - e.touches[1].pageX,
+              e.touches[0].pageY - e.touches[1].pageY
+            );
+            const delta = (currentDist - initialPinchDist) / 180;
+            zoomGalleryModal(delta);
+            initialPinchDist = currentDist;
+          }
+        }, { passive: true });
+
+        modalEl.addEventListener('touchend', function(e) {
+          if (modalZoomLevel === 1.0 && e.changedTouches.length === 1) {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) navGalleryModal(1);
+            if (touchEndX - touchStartX > 50) navGalleryModal(-1);
+          }
+          initialPinchDist = 0;
+        }, { passive: true });
+      }
+
+      // Smooth Center Image Scale Highlight (5-8% larger near center)
+      function updateGalleryCenterHighlight() {
+        const wrapper = document.querySelector('.gallery-carousel-wrapper');
+        if (wrapper) {
+          const wrapperRect = wrapper.getBoundingClientRect();
+          const wrapperCenter = wrapperRect.left + wrapperRect.width / 2;
+          const cards = wrapper.querySelectorAll('.gallery-card');
+
+          cards.forEach(card => {
+            const cardRect = card.getBoundingClientRect();
+            const cardCenter = cardRect.left + cardRect.width / 2;
+            const distFromCenter = Math.abs(wrapperCenter - cardCenter);
+            const maxDist = wrapperRect.width * 0.35;
+
+            if (distFromCenter < maxDist) {
+              const ratio = 1 - distFromCenter / maxDist;
+              const scale = 1 + 0.065 * Math.pow(ratio, 1.5);
+              card.style.transform = `scale(${scale.toFixed(3)})`;
+              card.style.zIndex = Math.round(10 + ratio * 10);
+            } else {
+              card.style.transform = 'scale(1.0)';
+              card.style.zIndex = '1';
+            }
+          });
+        }
+        requestAnimationFrame(updateGalleryCenterHighlight);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', updateGalleryCenterHighlight);
+      } else {
+        updateGalleryCenterHighlight();
+      }
+    </script>
 
     <!-- Floating YouTube Video Widget -->
     <div class="floating-video-container" id="floatingVideo">

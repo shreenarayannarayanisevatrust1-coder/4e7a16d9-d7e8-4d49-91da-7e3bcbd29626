@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <g fill="#D4AF37" stroke="#D4AF37" stroke-width="0.5">
+    <!-- Center Petal -->
+    <path d="M50 20 C47 40 45 60 50 80 C55 60 53 40 50 20 Z" />
+    
+    <!-- Inner Left Petal -->
+    <path d="M50 35 C38 45 35 62 48 78 C42 62 46 48 50 35 Z" />
+    <!-- Inner Right Petal -->
+    <path d="M50 35 C62 45 65 62 52 78 C58 62 54 48 50 35 Z" />
+    
+    <!-- Outer Left Petal -->
+    <path d="M49 48 C28 53 22 70 43 80 C32 70 38 58 49 48 Z" />
+    <!-- Outer Right Petal -->
+    <path d="M51 48 C72 53 78 70 57 80 C68 70 62 58 51 48 Z" />
+    
+    <!-- Bottom Petals -->
+    <path d="M47 75 C30 76 25 86 46 84 C38 82 42 78 47 75 Z" />
+    <path d="M53 75 C70 76 75 86 54 84 C62 82 58 78 53 75 Z" />
+    
+    <!-- Lotus Stem Base -->
+    <path d="M48 83 C49 88 51 88 52 83 Z" fill="#D4AF37" />
+  </g>
+</svg>

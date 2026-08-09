@@ -38,11 +38,11 @@ const localDatabase = {
     }
   ],
   upcomingEvent: {
-    title: "रात्री ज्योति उत्सव",
-    description: "एक भव्य आध्यात्मिक संध्या, जहाँ दिव्य महाआरती, सुंदर भजनों की श्रृंखला और सामूहिक प्रार्थना की पवित्र ज्योति एक साथ प्रज्वलित होगी।",
-    datetime: "तिथि: 15 जुलाई 2026 • समय: शाम 7:00 बजे",
+    title: "३१०० महामंगलपाठ",
+    description: "एक भव्य अलौकिक अनुष्ठान, जहाँ ३१०० महिलाओं द्वारा सामूहिक महामंगलपाठ, दिव्य महाआरती और भजनों की पावन धारा प्रवाहित होगी। हम सभी श्रद्धालुओं एवं परिवारों का सहर्ष स्वागत करते हैं कि वे इस पावन अवसर पर पधारकर श्री रानी सती दादीजी का दिव्य आशीर्वाद प्राप्त करें।",
+    datetime: "तिथि: 23 अगस्त 2026, रविवार • समय: सुबह 11:00 बजे",
     details: "सामूहिक भक्ति रस, दिव्य ज्योति दर्शन और संपूर्ण परिवार के लिए मंगलमय व पावन वातावरण।",
-    image: "https://images.unsplash.com/photo-1509789014768-a42e5bfba444?auto=format&fit=crop&w=1100&q=80"
+    image: "images/rani_sati_dadi_event.jpg"
   },
   pastEvents: [
     {
@@ -68,12 +68,12 @@ const localDatabase = {
     }
   ],
   gallery: [
-    "https://images.unsplash.com/photo-1566908829744-8d4e92ec4a7a?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1590076214667-c06d7e97a8e2?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1545128485-c400e7702796?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1509789014768-a42e5bfba444?auto=format&fit=crop&w=800&q=80",
-    "https://images.unsplash.com/photo-1542856391-010fb87dcfed?auto=format&fit=crop&w=800&q=80"
+    "images/img1.jpg",
+    "images/img2.jpg",
+    "images/img3.jpg",
+    "images/img4.jpg",
+    "images/img5.jpg",
+    "images/img 6.jpg"
   ]
 };
 

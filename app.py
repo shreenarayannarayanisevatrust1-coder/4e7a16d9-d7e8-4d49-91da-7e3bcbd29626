@@ -71,6 +71,18 @@ def load_and_bundle_files():
         with open("style.css", "r", encoding="utf-8") as f:
             css = f.read()
         html = html.replace(
+            '<link rel="stylesheet" href="style.css?v=5" />',
+            f'<style>{css}</style>'
+        ).replace(
+            '<link rel="stylesheet" href="style.css?v=4" />',
+            f'<style>{css}</style>'
+        ).replace(
+            '<link rel="stylesheet" href="style.css?v=3" />',
+            f'<style>{css}</style>'
+        ).replace(
+            '<link rel="stylesheet" href="style.css?v=2" />',
+            f'<style>{css}</style>'
+        ).replace(
             '<link rel="stylesheet" href="style.css" />',
             f'<style>{css}</style>'
         )

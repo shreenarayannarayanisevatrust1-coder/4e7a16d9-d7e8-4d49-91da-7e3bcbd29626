@@ -92,15 +92,12 @@ async function loadGallery() {
     const imageList = [...images, ...images];
     
     imageList.forEach(imgUrl => {
-      const card = document.createElement('div');
-      card.className = 'gallery-card';
-      
       const img = document.createElement('img');
       img.src = imgUrl; // Calls backend proxy route
+      img.className = 'gallery-img';
       img.alt = 'गैलरी चित्र';
       
-      card.appendChild(img);
-      track.appendChild(card);
+      track.appendChild(img);
     });
   } catch (error) {
     console.error('Failed to load gallery from backend:', error);

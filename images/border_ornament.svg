@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 30" width="400" height="30" fill="none">
+  <!-- Left Decorative Line -->
+  <path d="M10 15 L170 15" stroke="#D4AF37" stroke-width="1.5" />
+  <path d="M20 12 L160 12" stroke="#D4AF37" stroke-width="0.75" stroke-dasharray="4 2" />
+  <circle cx="170" cy="15" r="3" fill="#D4AF37" />
+
+  <!-- Right Decorative Line -->
+  <path d="M230 15 L390 15" stroke="#D4AF37" stroke-width="1.5" />
+  <path d="M240 12 L380 12" stroke="#D4AF37" stroke-width="0.75" stroke-dasharray="4 2" />
+  <circle cx="230" cy="15" r="3" fill="#D4AF37" />
+
+  <!-- Center Mandala Ornament -->
+  <g transform="translate(185, 0)">
+    <circle cx="15" cy="15" r="10" stroke="#D4AF37" stroke-width="1.5" />
+    <circle cx="15" cy="15" r="6" fill="#D4AF37" />
+    <path d="M15 2 C18 8 12 8 15 2 Z" fill="#D4AF37" transform="rotate(0 15 15)"/>
+    <path d="M15 2 C18 8 12 8 15 2 Z" fill="#D4AF37" transform="rotate(45 15 15)"/>
+    <path d="M15 2 C18 8 12 8 15 2 Z" fill="#D4AF37" transform="rotate(90 15 15)"/>
+    <path d="M15 2 C18 8 12 8 15 2 Z" fill="#D4AF37" transform="rotate(135 15 15)"/>
+    <path d="M15 2 C18 8 12 8 15 2 Z" fill="#D4AF37" transform="rotate(180 15 15)"/>
+    <path d="M15 2 C18 8 12 8 15 2 Z" fill="#D4AF37" transform="rotate(225 15 15)"/>
+    <path d="M15 2 C18 8 12 8 15 2 Z" fill="#D4AF37" transform="rotate(270 15 15)"/>
+    <path d="M15 2 C18 8 12 8 15 2 Z" fill="#D4AF37" transform="rotate(315 15 15)"/>
+  </g>
+</svg>

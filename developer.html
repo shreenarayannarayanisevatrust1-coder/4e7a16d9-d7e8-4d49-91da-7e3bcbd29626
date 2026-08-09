@@ -43,20 +43,31 @@
         <!-- Developer 2 -->
         <div class="dev-card">
           <div class="dev-profile">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=600&q=80" alt="Rohit Sen" />
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=600&q=80" alt="Ashish Kumar" />
             <div class="dev-info">
-              <span class="pill">Rohit Sen</span>
+              <span class="pill">Ashish Kumar</span>
               <h2>नमस्ते, मैं सह-विकासकर्ता हूँ</h2>
               <p>मैं एक Backend और Full Stack इंजीनियर हूँ जो तेज़, सुरक्षित और स्केलेबल वेब प्रणालियों का निर्माण करता हूँ।</p>
               <p><strong>भूमिका:</strong> Node.js, API डेवलपमेंट, डेटाबेस ऑप्टिमाइजेशन, क्लाउड आर्किटेक्चर और सर्वर प्रबंधन।</p>
               <div class="dev-contact">
                 <strong>संपर्क सूत्र:</strong>
-                <a href="mailto:rohitsen.dev@gmail.com"><i class="fa-solid fa-envelope social-icon email-color"></i> rohitsen.dev@gmail.com</a>
+                <a href="mailto:ashishkeshri1735@gmail.com"><i class="fa-solid fa-envelope social-icon email-color"></i> ashishkeshri1735@gmail.com</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script>
+      // Handle mailto links inside sandboxed environments (like Streamlit iframes)
+      document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          if (window.self !== window.top) {
+            window.open(link.href, '_blank');
+            e.preventDefault();
+          }
+        });
+      });
+    </script>
   </body>
 </html>

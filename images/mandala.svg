@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none" stroke="#D4AF37" stroke-width="0.5">
+  <circle cx="50" cy="50" r="48" stroke-dasharray="1 1"/>
+  <circle cx="50" cy="50" r="45"/>
+  <circle cx="50" cy="50" r="38"/>
+  <circle cx="50" cy="50" r="30" stroke-dasharray="2 2"/>
+  <circle cx="50" cy="50" r="22"/>
+  <circle cx="50" cy="50" r="12"/>
+  
+  <!-- Central Star/Flower -->
+  <path d="M50 38 L53 45 L60 45 L55 50 L57 57 L50 53 L43 57 L45 50 L40 45 L47 45 Z" fill="#D4AF37" opacity="0.3"/>
+  <circle cx="50" cy="50" r="4" fill="#D4AF37"/>
+
+  <!-- Radial Petals / Rays -->
+  <g id="petals">
+    <!-- 12 Petals -->
+    <path d="M50 12 C52 20 48 20 50 22 C52 20 48 20 50 12" />
+    <path d="M50 12 C52 20 48 20 50 22 C52 20 48 20 50 12" transform="rotate(30 50 50)" />
+    <path d="M50 12 C52 20 48 20 50 22 C52 20 48 20 50 12" transform="rotate(60 50 50)" />
+    <path d="M50 12 C52 20 48 20 50 22 C52 20 48 20 50 12" transform="rotate(90 50 50)" />
+    <path d="M50 12 C52 20 48 20 50 22 C52 20 48 20 50 12" transform="rotate(120 50 50)" />
+    <path d="M50 12 C52 20 48 20 50 22 C52 20 48 20 50 12" transform="rotate(150 50 50)" />
+    <path d="M50 12 C52 20 48 20 50 22 C52 20 48 20 50 12" transform="rotate(180 50 50)" />
+    <path d="M50 12 C52 20 48 20 50 22 C52 20 48 20 50 12" transform="rotate(210 50 50)" />
+    <path d="M50 12 C52 20 48 20 50 22 C52 20 48 20 50 12" transform="rotate(240 50 50)" />
+    <path d="M50 12 C52 20 48 20 50 22 C52 20 48 20 50 12" transform="rotate(270 50 50)" />
+    <path d="M50 12 C52 20 48 20 50 22 C52 20 48 20 50 12" transform="rotate(300 50 50)" />
+    <path d="M50 12 C52 20 48 20 50 22 C52 20 48 20 50 12" transform="rotate(330 50 50)" />
+  </g>
+  
+  <!-- Outer Decorative Loops -->
+  <g transform="rotate(15 50 50)">
+    <path d="M50 2 C55 10 45 10 50 12" stroke-width="0.3"/>
+    <path d="M50 2 C55 10 45 10 50 12" transform="rotate(30 50 50)" stroke-width="0.3"/>
+    <path d="M50 2 C55 10 45 10 50 12" transform="rotate(60 50 50)" stroke-width="0.3"/>
+    <path d="M50 2 C55 10 45 10 50 12" transform="rotate(90 50 50)" stroke-width="0.3"/>
+    <path d="M50 2 C55 10 45 10 50 12" transform="rotate(120 50 50)" stroke-width="0.3"/>
+    <path d="M50 2 C55 10 45 10 50 12" transform="rotate(150 50 50)" stroke-width="0.3"/>
+    <path d="M50 2 C55 10 45 10 50 12" transform="rotate(180 50 50)" stroke-width="0.3"/>
+    <path d="M50 2 C55 10 45 10 50 12" transform="rotate(210 50 50)" stroke-width="0.3"/>
+    <path d="M50 2 C55 10 45 10 50 12" transform="rotate(240 50 50)" stroke-width="0.3"/>
+    <path d="M50 2 C55 10 45 10 50 12" transform="rotate(270 50 50)" stroke-width="0.3"/>
+    <path d="M50 2 C55 10 45 10 50 12" transform="rotate(300 50 50)" stroke-width="0.3"/>
+    <path d="M50 2 C55 10 45 10 50 12" transform="rotate(330 50 50)" stroke-width="0.3"/>
+  </g>
+
+  <!-- Geometric Inner Details -->
+  <g stroke-width="0.25" opacity="0.7">
+    <line x1="50" y1="2" x2="50" y2="98" />
+    <line x1="2" y1="50" x2="98" y2="50" />
+    <line x1="16" y1="16" x2="84" y2="84" />
+    <line x1="16" y1="84" x2="84" y2="16" />
+  </g>
+</svg>

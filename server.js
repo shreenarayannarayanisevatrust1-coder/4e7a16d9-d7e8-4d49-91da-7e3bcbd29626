@@ -85,7 +85,7 @@ const localDatabase = {
     "images/img3.jpg",
     "images/img4.jpg",
     "images/img5.jpg",
-    "images/img 6.jpg"
+    "images/img6.jpg"
   ]
 };
 

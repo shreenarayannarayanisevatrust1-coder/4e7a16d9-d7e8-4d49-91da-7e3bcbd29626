@@ -23,7 +23,12 @@
         <a class="brand" href="#home">
           <img class="brand-logo" src="images/logo.jpeg" alt="Logo" /> <span class="wave-loading-text" data-text="श्री नारायण नारायणी सेवा ट्रस्ट">श्री नारायण नारायणी सेवा ट्रस्ट</span>
         </a>
-        <nav class="nav-links" aria-label="मुख्य नेविगेशन">
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="मेनू खोलें" aria-expanded="false" aria-controls="navLinks">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <nav class="nav-links" id="navLinks" aria-label="मुख्य नेविगेशन">
           <a href="#home">मुख्य पृष्ठ</a>
           <a href="#about">हमारे बारे में</a>
           <a href="#events">आने वाले कार्यक्रम</a>
@@ -596,7 +601,7 @@
           <!-- 8. Gallery Counter / Section Label -->
           <div class="gallery-counter-label">
             <span class="gallery-counter-text">
-              <span class="gallery-counter-icon">📷</span>
+              <span class="gallery-counter-icon"></span>
               वर्षों की सेवा की अमूल्य झलकियाँ
             </span>
             <div class="gallery-counter-subline"></div>
@@ -1645,15 +1650,94 @@
         }
       })();
 
-      // Handle mailto links inside sandboxed environments (like Streamlit iframes)
-      document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-        link.addEventListener('click', (e) => {
-          if (window.self !== window.top) {
-            window.open(link.href, '_blank');
-            e.preventDefault();
+      // Every mail link opens a Gmail compose window; the mailto: href stays as
+      // the fallback when the popup is blocked. Also covers sandboxed embeds,
+      // where a bare mailto: navigation is silently dropped.
+      (function initMailCompose() {
+        const DEFAULTS = {
+          'shreenarayannarayanisevatrust1@gmail.com': {
+            su: 'श्री नारायण नारायणी सेवा ट्रस्ट - संपर्क',
+            body: 'जय श्री कृष्ण,\n\n'
           }
+        };
+        const GENERIC = {
+          su: 'Enquiry from Shree Narayan Narayani Seva Trust website',
+          body: 'Hello,\n\n'
+        };
+
+        function parseMailto(href) {
+          const raw = href.replace(/^mailto:/i, '');
+          const qIndex = raw.indexOf('?');
+          const to = decodeURIComponent(qIndex === -1 ? raw : raw.slice(0, qIndex));
+          const params = new URLSearchParams(qIndex === -1 ? '' : raw.slice(qIndex + 1));
+          const preset = DEFAULTS[to.toLowerCase()] || GENERIC;
+          return {
+            to,
+            su: params.get('subject') || preset.su,
+            body: params.get('body') || preset.body,
+            cc: params.get('cc') || '',
+            bcc: params.get('bcc') || ''
+          };
+        }
+
+        function gmailComposeUrl(mail) {
+          let url = 'https://mail.google.com/mail/?view=cm&fs=1&tf=1' +
+            '&to=' + encodeURIComponent(mail.to) +
+            '&su=' + encodeURIComponent(mail.su) +
+            '&body=' + encodeURIComponent(mail.body);
+          if (mail.cc) url += '&cc=' + encodeURIComponent(mail.cc);
+          if (mail.bcc) url += '&bcc=' + encodeURIComponent(mail.bcc);
+          return url;
+        }
+
+        document.addEventListener('click', (e) => {
+          const link = e.target.closest('a[href^="mailto:"]');
+          if (!link) return;
+          // Leave new-tab / new-window modifier clicks to the browser.
+          if (e.defaultPrevented || e.button !== 0 || e.metaKey ||
+              e.ctrlKey || e.shiftKey || e.altKey) return;
+
+          const composeWindow = window.open(
+            gmailComposeUrl(parseMailto(link.getAttribute('href'))),
+            '_blank',
+            'noopener,noreferrer'
+          );
+          if (composeWindow) e.preventDefault();
+          // Popup blocked -> the default mailto: navigation still runs.
         });
-      });
+      })();
+
+      // Mobile / tablet navigation drawer
+      (function initNavToggle() {
+        const toggle = document.getElementById('navToggle');
+        const nav = document.getElementById('navLinks');
+        if (!toggle || !nav) return;
+
+        const backdrop = document.createElement('div');
+        backdrop.className = 'nav-backdrop';
+        document.body.appendChild(backdrop);
+
+        function setOpen(open) {
+          document.body.classList.toggle('nav-open', open);
+          toggle.setAttribute('aria-expanded', String(open));
+          toggle.setAttribute('aria-label', open ? 'मेनू बंद करें' : 'मेनू खोलें');
+        }
+
+        toggle.addEventListener('click', () => {
+          setOpen(!document.body.classList.contains('nav-open'));
+        });
+        backdrop.addEventListener('click', () => setOpen(false));
+        nav.addEventListener('click', (e) => {
+          if (e.target.closest('a')) setOpen(false);
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') setOpen(false);
+        });
+        // Drawer state must not survive a resize back up to desktop.
+        window.matchMedia('(min-width: 1025px)').addEventListener('change', (e) => {
+          if (e.matches) setOpen(false);
+        });
+      })();
 
       // Seamless Continuous Infinite Carousel for Gallery Section
       (function initGalleryMarquee() {

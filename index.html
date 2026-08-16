@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Hind:wght@400;500;600;700&family=Marcellus&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5" />
+    <link rel="stylesheet" href="style.css?v=6" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="icon" type="image/jpeg" href="images/logo.jpeg" />
   </head>
@@ -28,8 +28,9 @@
           <a href="#about">हमारे बारे में</a>
           <a href="#events">आने वाले कार्यक्रम</a>
           <a href="#gallery">गैलरी</a>
+          <a href="#seva">सेवाएँ</a>
           <a href="#members">सदस्य</a>
-          <a href="#contact">संपर्क & विकासकर्ता</a>
+          <a href="#contact">संपर्क</a>
         </nav>
       </div>
     </header>
@@ -59,36 +60,28 @@
         <!-- Luxury Devotional Overlay -->
         <div class="hero-devotional-overlay"></div>
 
-        <!-- Subtle Corner & Background Decorations -->
-        <!-- Top Left Golden Mandala (8% Opacity) -->
-        <div class="hero-decor decor-mandala-topleft">
-          <img src="images/mandala.svg" alt="" />
+        <!-- Devotional Decorative Elements around Hero Section (Balanced & Symmetrical) -->
+        <!-- Top Left Temple Bell (Static - Symmetrical Match for Top Right Bell) -->
+        <div class="hero-decor decor-bell-topleft">
+          <img src="images/temple_bell.svg" alt="Temple Bell" />
         </div>
 
-        <!-- Top Right Temple Bell -->
+        <!-- Top Right Temple Bell (Primary Ringing Bell - Retains Active Ringing Animation) -->
         <div class="hero-decor decor-bell-topright">
           <img src="images/temple_bell.svg" alt="Temple Bell" />
         </div>
 
-        <!-- Bottom Temple Silhouette (5% Opacity) -->
-        <div class="hero-decor decor-temple-bottom">
-          <img src="images/temple_silhouette.svg" alt="" />
+        <!-- Symmetrical Golden Mandalas (Background Watermarks) -->
+        <div class="hero-decor decor-mandala-topleft">
+          <img src="images/mandala.svg" alt="" />
+        </div>
+        <div class="hero-decor decor-mandala-topright">
+          <img src="images/mandala.svg" alt="" />
         </div>
 
-        <!-- Floating Glowing Particles (Golden Dust, Flower Petals, Tiny Diyas) -->
-        <div class="hero-floating-particles">
-          <!-- Golden Dust -->
-          <span class="particle particle-dust dust-1"></span>
-          <span class="particle particle-dust dust-2"></span>
-          <span class="particle particle-dust dust-3"></span>
-          <span class="particle particle-dust dust-4"></span>
-          <!-- Flower Petals -->
-          <span class="particle particle-petal petal-1">🌸</span>
-          <span class="particle particle-petal petal-2">🌸</span>
-          <span class="particle particle-petal petal-3">🌸</span>
-          <!-- Tiny Diyas -->
-          <span class="particle particle-diya diya-1">🪔</span>
-          <span class="particle particle-diya diya-2">🪔</span>
+        <!-- Bottom Temple Silhouette -->
+        <div class="hero-decor decor-temple-bottom">
+          <img src="images/temple_silhouette.svg" alt="" />
         </div>
 
         <!-- Glassmorphism Content Card -->
@@ -131,8 +124,8 @@
               <div class="stat-item">
                 <div class="stat-icon">🛕</div>
                 <div class="stat-info">
-                  <span class="stat-label" data-target="2019">2019</span>
-                  <span class="stat-label">Since 2019</span>
+                  <span class="stat-text">2019</span>
+                  <span class="stat-label">स्थापना वर्ष</span>
                 </div>
               </div>
               <div class="stat-item">
@@ -146,14 +139,14 @@
                 <div class="stat-icon">🪔</div>
                 <div class="stat-info">
                   <span class="stat-number" data-target="500" data-suffix="+">0</span>
-                  <span class="stat-label">आयोजन</span>
+                  <span class="stat-label">भव्य आयोजन</span>
                 </div>
               </div>
               <div class="stat-item">
                 <div class="stat-icon">🙏</div>
                 <div class="stat-info">
                   <span class="stat-text">हजारों</span>
-                  <span class="stat-label">सेवगान</span>
+                  <span class="stat-label">भक्त एवं सेवक</span>
                 </div>
               </div>
             </div>
@@ -434,7 +427,11 @@
             <div class="ultra-card-right">
               <!-- Top Capsule Badge -->
               <div class="ultra-badge-wrapper">
-                <span class="ultra-badge">✨ ३१०० महामंगलपाठ ✨</span>
+                <span class="ultra-badge">
+                  <span class="badge-swastik">卐</span>
+                  <span class="badge-text">पधारो</span>
+                  <span class="badge-swastik">卐</span>
+                </span>
               </div>
 
               <!-- Main Title -->
@@ -479,15 +476,21 @@
                 </div>
 
                 <!-- Card 3: Venue (Slightly larger text spacing) -->
-                <div class="event-grid-card venue-card">
+                <a
+                  class="event-grid-card venue-card"
+                  href="https://www.google.com/maps/search/?api=1&amp;query=Divinity%20Pavilion%2C%20Lake%20Town%2C%20Kolkata"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Google Maps पर स्थान देखें"
+                >
                   <div class="event-card-icon-box">
-                    <span class="event-card-icon">📍</span>
+                    <i class="fa-solid fa-location-dot event-card-icon"></i>
                   </div>
                   <div class="event-card-details">
                     <span class="event-card-title">स्थान</span>
                     <span class="event-card-value">उत्सव स्थल – डिविनिटी पवेलियन, लेक टाउन, कोलकाता</span>
                   </div>
-                </div>
+                </a>
 
                 <!-- Card 4: Organizer -->
                 <div class="event-grid-card">
@@ -605,194 +608,98 @@
               <!-- Set 1 (8 Authentic Photo Floating Cards) -->
               <div class="gallery-card" onclick="openGalleryModal(0)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">महामंगलपाठ</span>
                   <img src="images/img1.jpg" alt="३१०० महिला महामंगलपाठ" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">३१०० महिला महामंगलपाठ</h3>
-                    <span class="gallery-card-date">🗓️ 23 August 2026</span>
-                    <p class="gallery-card-desc">३१०० महिलाओं द्वारा आयोजित भव्य आध्यात्मिक आयोजन।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(1)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">दिव्य महाआरती</span>
                   <img src="images/img2.jpg" alt="श्री रानी सती दादीजी महाआरती" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">श्री रानी सती दादीजी महाआरती</h3>
-                    <span class="gallery-card-date">🗓️ 15 जनवरी 2026</span>
-                    <p class="gallery-card-desc">प्रज्वलित दीपों एवं शंखध्वनि के साथ दादीजी की अलौकिक आरती।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(2)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">भजन संध्या</span>
                   <img src="images/img3.jpg" alt="भव्य भक्ति व भजन संध्या" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">भव्य भक्ति व भजन संध्या</h3>
-                    <span class="gallery-card-date">🗓️ 10 नवंबर 2025</span>
-                    <p class="gallery-card-desc">सुप्रसिद्ध भजन गायकों द्वारा सुमधुर भजनों की अविरल पावन धारा।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(3)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">पुष्प वर्षा</span>
                   <img src="images/img4.jpg" alt="दिव्य पुष्प वृष्टि उत्सव" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">दिव्य पुष्प वृष्टि उत्सव</h3>
-                    <span class="gallery-card-date">🗓️ 05 सितंबर 2025</span>
-                    <p class="gallery-card-desc">दादीजी के पावन दरबार में अपार पुष्प वर्षा एवं संकीर्तन।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(4)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">भंडारा सेवा</span>
                   <img src="images/img5.jpg" alt="मानव सेवा एवं महाप्रसाद" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">मानव सेवा एवं महाप्रसाद</h3>
-                    <span class="gallery-card-date">🗓️ 14 अप्रैल 2025</span>
-                    <p class="gallery-card-desc">हजारों श्रद्धालुओं के बीच निस्वार्थ भाव से महाप्रसाद वितरण।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(5)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">सांस्कृतिक</span>
                   <img src="images/img6.jpg" alt="सनातन संस्कार व सांस्कृतिक पर्व" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">सनातन संस्कार व सांस्कृतिक पर्व</h3>
-                    <span class="gallery-card-date">🗓️ 26 जनवरी 2025</span>
-                    <p class="gallery-card-desc">सनातन संस्कृति एवं भारतीय आध्यात्मिक परंपराओं का महोत्सव।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(6)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">श्रद्धालु समागम</span>
                   <img src="images/DSC06989.jpg" alt="विशाल भक्त समागम" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">विशाल भक्त समागम</h3>
-                    <span class="gallery-card-date">🗓️ 01 जनवरी 2025</span>
-                    <p class="gallery-card-desc">हजारों श्रद्धालुओं की उपस्थिति में पावन आशीर्वाद समारोह।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(7)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">दीपोत्सव</span>
                   <img src="images/ESC01407.jpg" alt="अलौकिक दीपोत्सव" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">अलौकिक दीपोत्सव</h3>
-                    <span class="gallery-card-date">🗓️ 12 नवंबर 2024</span>
-                    <p class="gallery-card-desc">हजारों दीपों की दिव्य ज्योति से प्रज्वलित पावन मंदिर परिसर।</p>
-                  </div>
                 </div>
               </div>
 
               <!-- Set 2 (Duplicate 8 items for True Infinite Loop) -->
               <div class="gallery-card" onclick="openGalleryModal(0)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">महामंगलपाठ</span>
                   <img src="images/img1.jpg" alt="३१०० महिला महामंगलपाठ" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">३१०० महिला महामंगलपाठ</h3>
-                    <span class="gallery-card-date">🗓️ 23 August 2026</span>
-                    <p class="gallery-card-desc">३१०० महिलाओं द्वारा आयोजित भव्य आध्यात्मिक आयोजन।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(1)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">दिव्य महाआरती</span>
                   <img src="images/img2.jpg" alt="श्री रानी सती दादीजी महाआरती" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">श्री रानी सती दादीजी महाआरती</h3>
-                    <span class="gallery-card-date">🗓️ 15 जनवरी 2026</span>
-                    <p class="gallery-card-desc">प्रज्वलित दीपों एवं शंखध्वनि के साथ दादीजी की अलौकिक आरती।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(2)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">भजन संध्या</span>
                   <img src="images/img3.jpg" alt="भव्य भक्ति व भजन संध्या" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">भव्य भक्ति व भजन संध्या</h3>
-                    <span class="gallery-card-date">🗓️ 10 नवंबर 2025</span>
-                    <p class="gallery-card-desc">सुप्रसिद्ध भजन गायकों द्वारा सुमधुर भजनों की अविरल पावन धारा।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(3)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">पुष्प वर्षा</span>
                   <img src="images/img4.jpg" alt="दिव्य पुष्प वृष्टि उत्सव" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">दिव्य पुष्प वृष्टि उत्सव</h3>
-                    <span class="gallery-card-date">🗓️ 05 सितंबर 2025</span>
-                    <p class="gallery-card-desc">दादीजी के पावन दरबार में अपार पुष्प वर्षा एवं संकीर्तन।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(4)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">भंडारा सेवा</span>
                   <img src="images/img5.jpg" alt="मानव सेवा एवं महाप्रसाद" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">मानव सेवा एवं महाप्रसाद</h3>
-                    <span class="gallery-card-date">🗓️ 14 अप्रैल 2025</span>
-                    <p class="gallery-card-desc">हजारों श्रद्धालुओं के बीच निस्वार्थ भाव से महाप्रसाद वितरण।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(5)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">सांस्कृतिक</span>
                   <img src="images/img6.jpg" alt="सनातन संस्कार व सांस्कृतिक पर्व" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">सनातन संस्कार व सांस्कृतिक पर्व</h3>
-                    <span class="gallery-card-date">🗓️ 26 जनवरी 2025</span>
-                    <p class="gallery-card-desc">सनातन संस्कृति एवं भारतीय आध्यात्मिक परंपराओं का महोत्सव।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(6)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">श्रद्धालु समागम</span>
                   <img src="images/DSC06989.jpg" alt="विशाल भक्त समागम" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">विशाल भक्त समागम</h3>
-                    <span class="gallery-card-date">🗓️ 01 जनवरी 2025</span>
-                    <p class="gallery-card-desc">हजारों श्रद्धालुओं की उपस्थिति में पावन आशीर्वाद समारोह।</p>
-                  </div>
                 </div>
               </div>
 
               <div class="gallery-card" onclick="openGalleryModal(7)">
                 <div class="gallery-card-inner">
-                  <span class="gallery-card-badge">दीपोत्सव</span>
                   <img src="images/ESC01407.jpg" alt="अलौकिक दीपोत्सव" class="gallery-card-img" loading="lazy" />
-                  <div class="gallery-card-overlay">
-                    <h3 class="gallery-card-title">अलौकिक दीपोत्सव</h3>
-                    <span class="gallery-card-date">🗓️ 12 नवंबर 2024</span>
-                    <p class="gallery-card-desc">हजारों दीपों की दिव्य ज्योति से प्रज्वलित पावन मंदिर परिसर।</p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -801,7 +708,7 @@
       </section>
 
       <!-- 8. Ultra-Premium Fullscreen Image Viewer Lightbox Modal -->
-      <div class="gallery-modal" id="galleryLightboxModal" onclick="closeGalleryModal(event)" role="dialog" aria-modal="true" aria-labelledby="galleryModalTitle">
+      <div class="gallery-modal" id="galleryLightboxModal" onclick="closeGalleryModal(event)" role="dialog" aria-modal="true" aria-label="गैलरी छवि">
         <div class="gallery-modal-content" onclick="event.stopPropagation()">
           
           <!-- Topbar Controls -->
@@ -829,13 +736,8 @@
             <img src="" alt="" id="galleryModalImg" class="gallery-modal-img" />
           </div>
 
-          <!-- Elegant Rounded Information Card -->
+          <!-- Navigation Info Card (image counter + keyboard shortcuts only) -->
           <div class="gallery-modal-info-card">
-            <div class="gallery-modal-info-header">
-              <h3 id="galleryModalTitle" class="gallery-modal-title"></h3>
-              <div id="galleryModalDate" class="gallery-modal-date-badge"></div>
-            </div>
-            <p id="galleryModalCaption" class="gallery-modal-caption"></p>
             <div class="gallery-modal-info-footer">
               <span id="galleryModalCounter" class="gallery-modal-counter"></span>
               <span class="gallery-keyboard-hint">ESC Close • ← → Navigate • Mouse Wheel Zoom</span>
@@ -849,6 +751,103 @@
 
         </div>
       </div>
+
+      <!-- Section Divider -->
+      <div class="section-divider">
+        <img src="images/border_ornament.svg" alt="Divider" />
+      </div>
+
+      <!-- Seva Activities Section (हमारी सेवाएँ) — shows the 3 latest entries.
+           Content comes from seva-data.js; the full list lives in seva.html. -->
+      <section class="seva-section" id="seva">
+        <!-- Ambient Golden Glow -->
+        <div class="seva-ambient-glow"></div>
+
+        <!-- Corner Watermark Patterns -->
+        <div class="seva-watermark seva-watermark-left">
+          <img src="images/mandala.svg" alt="" />
+        </div>
+        <div class="seva-watermark seva-watermark-right">
+          <img src="images/lotus.svg" alt="" />
+        </div>
+
+        <div class="seva-container">
+          <!-- Section Heading -->
+          <header class="seva-header">
+            <h2 class="seva-header-title">🪔 हमारी सेवाएँ 🪔</h2>
+            <div class="seva-header-divider">
+              <span class="seva-line"></span>
+              <span class="seva-diya-ornament">🌸</span>
+              <span class="seva-line"></span>
+            </div>
+            <p class="seva-header-subtitle">
+              सेवा से संस्कार • संस्कार से समाज
+            </p>
+          </header>
+
+          <!-- Recent Seva Activities: 3 latest services in a horizontal carousel -->
+          <div class="seva-recent-block">
+            <div class="seva-recent-head">
+              <h3 class="seva-recent-title">हाल की सेवा गतिविधियाँ</h3>
+            </div>
+
+            <!-- Shell holds the arrows at the left & right ends of the pictures -->
+            <div class="seva-carousel-shell">
+              <button type="button" class="seva-nav-btn seva-nav-prev" id="sevaPrevBtn" aria-label="पिछली सेवा गतिविधि">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+              </button>
+
+              <div class="seva-carousel-viewport">
+                <div class="seva-carousel-track" id="sevaCarouselTrack">
+                  <!-- Populated by initSevaCarousel() from seva-data.js -->
+                </div>
+              </div>
+
+              <button type="button" class="seva-nav-btn seva-nav-next" id="sevaNextBtn" aria-label="अगली सेवा गतिविधि">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Seva Impact / Statistics Row -->
+          <div class="seva-stats-row">
+            <div class="seva-stat-item">
+              <span class="seva-stat-icon">🪔</span>
+              <span class="seva-stat-value" id="sevaStatCount">0</span>
+              <span class="seva-stat-label">सेवा गतिविधियाँ</span>
+            </div>
+            <div class="seva-stat-item">
+              <span class="seva-stat-icon">🙏</span>
+              <span class="seva-stat-value">10,000+</span>
+              <span class="seva-stat-label">प्रसाद लाभार्थी</span>
+            </div>
+            <div class="seva-stat-item">
+              <span class="seva-stat-icon">🛕</span>
+              <span class="seva-stat-value">2019</span>
+              <span class="seva-stat-label">स्थापना वर्ष</span>
+            </div>
+            <div class="seva-stat-item">
+              <span class="seva-stat-icon">🤝</span>
+              <span class="seva-stat-value">हजारों</span>
+              <span class="seva-stat-label">भक्त एवं सेवक</span>
+            </div>
+          </div>
+
+          <!-- Call To Action Row -->
+          <div class="seva-cta-wrapper">
+            <div class="seva-cta-row">
+              <a href="seva.html" class="seva-cta-btn">
+                <span>सभी सेवा गतिविधियाँ देखें</span>
+                <i class="fa-solid fa-arrow-right seva-cta-arrow" aria-hidden="true"></i>
+              </a>
+              <a href="#contact" class="seva-join-btn">
+                <span>🙏 सेवा में जुड़ें</span>
+              </a>
+            </div>
+            <p class="seva-cta-note">ट्रस्ट की समस्त सेवा गतिविधियों का संपूर्ण संग्रह</p>
+          </div>
+        </div>
+      </section>
 
       <!-- Section Divider -->
       <div class="section-divider">
@@ -935,22 +934,23 @@
             <span class="mid-divider-line"></span>
             <img src="images/lotus.svg" alt="Lotus" class="mid-divider-icon" />
             <span class="mid-divider-line"></span>
+            
           </div>
 
           <!-- Bottom Statistics Counters -->
           <div class="members-stats-container">
             <div class="members-stat-card">
-              <div class="members-stat-icon">👑</div>
+              <div class="members-stat-icon"></div>
               <div class="members-stat-val" data-target="52">52</div>
               <div class="members-stat-lbl">संरक्षक सदस्य</div>
             </div>
             <div class="members-stat-card">
-              <div class="members-stat-icon">🌸</div>
+              <div class="members-stat-icon"></div>
               <div class="members-stat-val" data-target="8">8</div>
               <div class="members-stat-lbl">आजीवन सदस्य</div>
             </div>
             <div class="members-stat-card">
-              <div class="members-stat-icon">🛕</div>
+              <div class="members-stat-icon"></div>
               <div class="members-stat-val" data-target="60">60</div>
               <div class="members-stat-lbl">कुल सदस्य</div>
             </div>
@@ -982,7 +982,7 @@
         <img src="images/border_ornament.svg" alt="Divider" />
       </div>
 
-      <!-- Contact & Developers Section -->
+      <!-- Contact Section -->
       <section class="section contact-section" id="contact">
         <!-- Subtle Devotional Corner Mandalas (<5% opacity) -->
         <img src="images/mandala.svg" alt="" class="contact-bg-mandala mandala-left" aria-hidden="true" />
@@ -990,8 +990,8 @@
 
         <div class="container">
           <div class="section-heading">
-            <h2>संपर्क और विकासकर्ता</h2>
-            <p>श्री नारायण नारायणी सेवा ट्रस्ट से जुड़ें और हमारे तकनीकी कलाकारों से मिलें।</p>
+            <h2>संपर्क एवं संकल्प</h2>
+            <p>श्री नारायण नारायणी सेवा ट्रस्ट से जुड़ें और हमारे पावन संकल्प का हिस्सा बनें।</p>
           </div>
           
           <!-- Glass-like Social Contact Container -->
@@ -1020,46 +1020,14 @@
             </div>
           </div>
 
-          <!-- Developers Segment -->
-          <div class="developers-section-wrapper">
-            <div class="dev-heading-wrapper">
-              <h3 class="dev-section-title">Website Designed & Developed By</h3>
-              <div class="dev-title-divider">
-                <span class="dev-line"></span>
-                <img src="images/diya.svg" alt="Diya" class="dev-diya-icon" />
-                <span class="dev-line"></span>
-              </div>
-            </div>
-
-            <div class="dev-cards-grid">
-              <!-- Developer 1 Card -->
-              <div class="dev-card-premium">
-                <div class="dev-img-wrapper">
-                  <img src="images/developer/IMG_5408.jpeg" alt="Akhil Kumar Agrawal" class="dev-avatar" />
-                </div>
-                <div class="dev-info-content">
-                  <h4 class="dev-name">Akhil Kumar Agrawal</h4>
-                  <span class="dev-role">FRONTEND & UI/UX</span>
-                  <p class="dev-tech">UI/UX, React, HTML5/CSS3</p>
-                  <a href="mailto:akhilme341@gmail.com" class="dev-email-btn" aria-label="Email Akhil Kumar Agrawal">
-                    <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
-                  </a>
-                </div>
-              </div>
-
-              <!-- Developer 2 Card -->
-              <div class="dev-card-premium">
-                <div class="dev-img-wrapper">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=600&q=80" alt="Ashish Kumar" class="dev-avatar" />
-                </div>
-                <div class="dev-info-content">
-                  <h4 class="dev-name">Ashish Kumar</h4>
-                  <span class="dev-role">FULL STACK DEVELOPER</span>
-                  <p class="dev-tech">Node.js, Express, API, Databases</p>
-                  <a href="mailto:ashishkeshri1735@gmail.com" class="dev-email-btn" aria-label="Email Ashish Kumar">
-                    <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
-                  </a>
-                </div>
+          <!-- Trust Core Purpose & Resolutions Segment -->
+          <div class="sankalp-section-wrapper">
+            <div class="sankalp-heading-wrapper">
+              <h3 class="sankalp-section-title">सेवा, संस्कार और समाज के प्रति हमारा संकल्प</h3>
+              <div class="sankalp-title-divider">
+                <span class="sankalp-line"></span>
+                <img src="images/diya.svg" alt="Diya" class="sankalp-diya-icon" />
+                <span class="sankalp-line"></span>
               </div>
             </div>
           </div>
@@ -1102,8 +1070,9 @@
               <li><a href="#about"><span class="devotional-bullet">❖</span> हमारे बारे में (About)</a></li>
               <li><a href="#events"><span class="devotional-bullet">❖</span> आगामी कार्यक्रम (Upcoming Events)</a></li>
               <li><a href="#gallery"><span class="devotional-bullet">❖</span> गैलरी (Gallery)</a></li>
+              <li><a href="#seva"><span class="devotional-bullet">❖</span> सेवाएँ (Seva)</a></li>
               <li><a href="#members"><span class="devotional-bullet">❖</span> सदस्य (Members)</a></li>
-              <li><a href="#contact"><span class="devotional-bullet">❖</span> संपर्क (Contact & Developers)</a></li>
+              <li><a href="#contact"><span class="devotional-bullet">❖</span> संपर्क (Contact)</a></li>
             </ul>
           </div>
 
@@ -1210,13 +1179,14 @@
           document.getElementById('about'),
           document.getElementById('events'),
           document.getElementById('gallery'),
+          document.getElementById('seva'),
           document.getElementById('members'),
           document.getElementById('contact'),
           document.getElementById('footer')
         ].filter(Boolean);
 
         function updateActiveNav(targetSectionId) {
-          // The footer is considered part of Contact & Developers (#contact)
+          // The footer is considered part of Contact (#contact)
           const activeId = (targetSectionId === 'footer') ? 'contact' : targetSectionId;
 
           navLinks.forEach(link => {
@@ -1847,6 +1817,15 @@
       }
     </script>
 
+    <!-- Seva Activities: shared data + renderer (also used by seva.html) -->
+    <script src="seva-data.js"></script>
+    <script>
+      // Homepage shows only the 3 latest services (seva8–seva10) in a looping
+      // carousel; all 10 remain available in the seva.html archive.
+      initSevaCarousel('sevaCarouselTrack', 'sevaPrevBtn', 'sevaNextBtn');
+      updateSevaStatCount('sevaStatCount');
+    </script>
+
     <!-- Ultra-Premium Devotional Gallery Lightbox Script -->
     <script>
       const galleryData = [
@@ -1909,9 +1888,6 @@
       function updateGalleryModalContent() {
         const item = galleryData[currentGalleryIdx];
         const imgEl = document.getElementById('galleryModalImg');
-        const titleEl = document.getElementById('galleryModalTitle');
-        const dateEl = document.getElementById('galleryModalDate');
-        const captionEl = document.getElementById('galleryModalCaption');
         const counterEl = document.getElementById('galleryModalCounter');
 
         if (imgEl) {
@@ -1924,9 +1900,6 @@
             imgEl.style.opacity = '1';
           }, 130);
         }
-        if (titleEl) titleEl.textContent = item.title;
-        if (dateEl) dateEl.innerHTML = `<span class="gallery-date-pill">🗓️ ${item.date}</span>`;
-        if (captionEl) captionEl.textContent = item.desc;
         if (counterEl) counterEl.textContent = `${currentGalleryIdx + 1} / ${galleryData.length}`;
 
         // Highlight active thumbnail & scroll to center smoothly
@@ -2115,9 +2088,40 @@
 
     <!-- Floating YouTube Video Widget -->
     <div class="floating-video-container" id="floatingVideo">
-      <button class="close-btn" onclick="document.getElementById('floatingVideo').style.display='none'">×</button>
-      <iframe src="https://www.youtube.com/embed/E7d_vtRrsYg?autoplay=1&mute=1&loop=1&playlist=E7d_vtRrsYg&controls=1&modestbranding=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <button class="close-btn" onclick="closeFloatingVideo()" aria-label="Close floating video">&times;</button>
+      <iframe 
+        id="floatingVideoIframe"
+        src="https://www.youtube.com/embed/E7d_vtRrsYg?autoplay=1&mute=1&loop=1&playlist=E7d_vtRrsYg&controls=1&modestbranding=1" 
+        data-src="https://www.youtube.com/embed/E7d_vtRrsYg?autoplay=1&mute=1&loop=1&playlist=E7d_vtRrsYg&controls=1&modestbranding=1"
+        allow="autoplay; encrypted-media" 
+        allowfullscreen>
+      </iframe>
     </div>
+
+    <script>
+      function closeFloatingVideo() {
+        var container = document.getElementById('floatingVideo');
+        if (container) {
+          var iframe = container.querySelector('iframe');
+          if (iframe) {
+            iframe.src = '';
+          }
+          container.style.display = 'none';
+        }
+      }
+
+      function openFloatingVideo() {
+        var container = document.getElementById('floatingVideo');
+        if (container) {
+          var iframe = container.querySelector('iframe');
+          if (iframe) {
+            var videoSrc = iframe.getAttribute('data-src') || 'https://www.youtube.com/embed/E7d_vtRrsYg?autoplay=1&mute=1&loop=1&playlist=E7d_vtRrsYg&controls=1&modestbranding=1';
+            iframe.src = videoSrc;
+          }
+          container.style.display = 'block';
+        }
+      }
+    </script>
 
   </body>
 </html>

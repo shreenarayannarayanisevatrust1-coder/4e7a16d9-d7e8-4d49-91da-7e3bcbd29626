@@ -236,20 +236,20 @@ h1, h2, h3, h4, .brand, .cursive-font {
   right: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(101, 21, 21, 0.35); /* Initially transparent maroon */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background: rgba(85, 14, 14, 0.88); /* Solid/translucent maroon with 88% opacity for perfect readability */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   transition: background 0.5s ease, backdrop-filter 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease;
 }
 
 .topbar.scrolled-glass {
-  background: rgba(101, 21, 21, 0.75); /* Glass Maroon */
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.4);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  background: rgba(90, 15, 15, 0.94); /* Glass Maroon */
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1.5px solid rgba(212, 175, 55, 0.55);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
 }
 
 .topbar.scrolled-solid {
@@ -432,15 +432,16 @@ h1, h2, h3, h4, .brand, .cursive-font {
   pointer-events: none;
   background:
     linear-gradient(
-      rgba(20, 8, 5, 0.55),
-      rgba(20, 8, 5, 0.45)
+      rgba(20, 8, 5, 0.20),
+      rgba(20, 8, 5, 0.13)
     ),
     linear-gradient(
-      rgba(212, 175, 55, 0.12),
-      rgba(232, 122, 31, 0.08)
+      rgba(212, 175, 55, 0.08),
+      rgba(232, 122, 31, 0.05)
     );
 }
 
+/* Corner & Background Decorations */
 /* Corner & Background Decorations */
 .hero-decor {
   position: absolute;
@@ -448,29 +449,34 @@ h1, h2, h3, h4, .brand, .cursive-font {
   z-index: 3;
 }
 
+/* Symmetrical Mandalas (Background Watermarks) */
 .decor-mandala-topleft {
   top: -60px;
   left: -60px;
   width: 320px;
   height: 320px;
-  opacity: 0.08;
-  animation: slow-rotate-mandala 120s linear infinite;
+  opacity: 0.07;
 }
 
-.decor-mandala-topleft img {
+.decor-mandala-topright {
+  top: -60px;
+  right: -60px;
+  width: 320px;
+  height: 320px;
+  opacity: 0.07;
+}
+
+.decor-mandala-topleft img,
+.decor-mandala-topright img {
   width: 100%;
   height: 100%;
   filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
 }
 
-@keyframes slow-rotate-mandala {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
+/* Top Left & Right Temple Bells (Synchronized Continuous Ringing Animation) */
+.decor-bell-topleft,
 .decor-bell-topright {
   top: 70px;
-  right: 5%;
   width: 50px;
   height: auto;
   z-index: 4;
@@ -478,16 +484,27 @@ h1, h2, h3, h4, .brand, .cursive-font {
   animation: sway-temple-bell 2.8s ease-in-out infinite alternate;
 }
 
-.decor-bell-topright img {
+.decor-bell-topleft {
+  left: 5%;
+}
+
+.decor-bell-topright {
+  right: 5%;
+}
+
+.decor-bell-topright img,
+.decor-bell-topleft img {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.6));
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.65));
 }
 
 @keyframes sway-temple-bell {
   0% { transform: rotate(-8deg); }
   100% { transform: rotate(8deg); }
 }
+
+
 
 .decor-temple-bottom {
   bottom: 0;
@@ -508,77 +525,6 @@ h1, h2, h3, h4, .brand, .cursive-font {
   object-position: bottom center;
 }
 
-/* Floating Glowing Particles (Golden Dust, Flower Petals, Tiny Diyas) */
-.hero-floating-particles {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.particle {
-  position: absolute;
-  will-change: transform, opacity;
-  user-select: none;
-}
-
-/* Golden Dust Particles */
-.particle-dust {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #D4AF37 0%, #E87A1F 70%, transparent 100%);
-  box-shadow: 0 0 12px #D4AF37, 0 0 24px #E87A1F;
-}
-
-.dust-1 { left: 12%; bottom: -10px; animation: float-dust-particle 14s ease-in-out infinite 0s; }
-.dust-2 { left: 35%; bottom: -10px; animation: float-dust-particle 18s ease-in-out infinite 3.5s; }
-.dust-3 { left: 62%; bottom: -10px; animation: float-dust-particle 16s ease-in-out infinite 1.8s; }
-.dust-4 { left: 88%; bottom: -10px; animation: float-dust-particle 15s ease-in-out infinite 4.2s; }
-
-@keyframes float-dust-particle {
-  0% { transform: translate3d(0, 0, 0) scale(0.7); opacity: 0; }
-  20% { opacity: 0.9; }
-  80% { opacity: 0.9; }
-  100% { transform: translate3d(30px, -105vh, 0) scale(1.5); opacity: 0; }
-}
-
-/* Flower Petals */
-.particle-petal {
-  font-size: 1.3rem;
-  opacity: 0;
-  filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.5));
-}
-
-.petal-1 { left: 20%; bottom: -20px; animation: float-petal-particle 15s ease-in-out infinite 1s; }
-.petal-2 { left: 50%; bottom: -20px; animation: float-petal-particle 19s ease-in-out infinite 5s; }
-.petal-3 { left: 75%; bottom: -20px; animation: float-petal-particle 17s ease-in-out infinite 2.5s; }
-
-@keyframes float-petal-particle {
-  0% { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
-  15% { opacity: 0.85; }
-  85% { opacity: 0.85; }
-  100% { transform: translate3d(-45px, -110vh, 0) rotate(420deg); opacity: 0; }
-}
-
-/* Tiny Diyas */
-.particle-diya {
-  font-size: 1.4rem;
-  opacity: 0;
-  filter: drop-shadow(0 0 10px rgba(232, 122, 31, 0.7));
-}
-
-.diya-1 { left: 8%; bottom: -30px; animation: float-diya-particle 20s linear infinite 2s; }
-.diya-2 { left: 92%; bottom: -30px; animation: float-diya-particle 22s linear infinite 7s; }
-
-@keyframes float-diya-particle {
-  0% { transform: translate3d(0, 0, 0) scale(0.85); opacity: 0; }
-  20% { opacity: 0.9; }
-  80% { opacity: 0.9; }
-  100% { transform: translate3d(25px, -110vh, 0) scale(1.15); opacity: 0; }
-}
-
 /* Glassmorphism Content Card */
 .hero-content-wrapper {
   position: relative;
@@ -595,41 +541,45 @@ h1, h2, h3, h4, .brand, .cursive-font {
 .hero-glass-card {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
+  overflow: visible;
   width: 720px;
   max-width: 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.03) 100%);
-  backdrop-filter: blur(4px) saturate(115%);
-  -webkit-backdrop-filter: blur(4px) saturate(115%);
-  border: 1px solid rgba(255, 230, 180, 0.4);
+  /* No glass at all: no tint, no blur, no border and no shadow, so the
+     background photograph behind the hero stays completely sharp and is
+     never covered by a visible card. Readability comes purely from the
+     feathered gradient veil in ::before plus the text shadows below. */
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
   border-radius: 28px;
-  box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.45),
-    0 0 40px rgba(212, 175, 55, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: none;
   padding: 50px 45px 40px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease-out, box-shadow 0.3s ease;
+  transition: transform 0.3s ease-out;
   will-change: transform;
 }
 
-/* Floating shine sweep across the glass card */
+/* Readability veil: a very subtle dark gradient that sits only behind the
+   text area and fades completely to transparent well before its edges, so
+   it never reads as a card. It darkens nothing but the immediate text bed. */
 .hero-glass-card::before {
   content: '';
   position: absolute;
+  inset: -4% -10%;
   z-index: -1;
-  top: -60%;
-  left: -35%;
-  width: 30%;
-  height: 220%;
-  background: linear-gradient(100deg, transparent 0%, rgba(255, 255, 255, 0.32) 50%, transparent 100%);
-  transform: rotate(15deg);
-  animation: hero-glass-shine 7s ease-in-out infinite;
   pointer-events: none;
+  background: radial-gradient(
+    ellipse at 50% 48%,
+    rgba(16, 6, 3, 0.38) 0%,
+    rgba(16, 6, 3, 0.30) 35%,
+    rgba(16, 6, 3, 0.16) 58%,
+    rgba(16, 6, 3, 0.05) 74%,
+    rgba(16, 6, 3, 0) 86%
+  );
 }
 
 @keyframes hero-glass-shine {
@@ -698,25 +648,64 @@ h1, h2, h3, h4, .brand, .cursive-font {
   align-items: center;
 }
 
-.title-line-1 {
-  background: linear-gradient(135deg, #FFF9EF 0%, #D4AF37 100%);
+/* Golden-orange luminous identity shared with the navigation brand name,
+   lifted brighter into warm gold / cream so the heading reads clearly against
+   the unblurred photograph. Uses drop-shadow (not text-shadow) so both the
+   dark contrast shadow and the golden glow sit behind the rendered gradient
+   instead of bleeding through the transparent glyph fill. */
+.title-line-1,
+.title-line-2 {
+  background: linear-gradient(
+    90deg,
+    #F9A825 0%,
+    #FFC85C 20%,
+    #FFE9A8 42%,
+    #FFFBEE 50%,
+    #FFE9A8 58%,
+    #FFC85C 80%,
+    #F9A825 100%
+  );
+  background-size: 250% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shimmer-anim 5s linear infinite;
   display: block;
+}
+
+.title-line-1 {
   font-size: clamp(24px, 3vw, 42px);
   font-weight: 700;
   letter-spacing: 0.5px;
+  filter:
+    drop-shadow(0 1px 2px rgba(0, 0, 0, 0.55))
+    drop-shadow(0 0 12px rgba(255, 205, 110, 0.38));
 }
 
+/* "महामंगलपाठ" — the focal line: a touch warmer and brighter, with a refined
+   two-stage golden-orange glow (tight halo + wide soft bloom). */
 .title-line-2 {
-  background: linear-gradient(135deg, #E87A1F 0%, #FFC107 50%, #D4AF37 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: block;
   font-size: clamp(38px, 5.2vw, 68px);
   font-weight: 800;
   letter-spacing: 1px;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    90deg,
+    #F59300 0%,
+    #FFBE4D 18%,
+    #FFE39A 42%,
+    #FFFDF4 50%,
+    #FFE39A 58%,
+    #FFBE4D 82%,
+    #F59300 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter:
+    drop-shadow(0 2px 3px rgba(0, 0, 0, 0.6))
+    drop-shadow(0 0 10px rgba(255, 190, 90, 0.5))
+    drop-shadow(0 0 26px rgba(240, 152, 48, 0.32));
 }
 
 /* Subtitle Styling */
@@ -728,19 +717,19 @@ h1, h2, h3, h4, .brand, .cursive-font {
   letter-spacing: 3px;
   text-transform: uppercase;
   margin-bottom: 14px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 2px 12px rgba(0, 0, 0, 0.45);
 }
 
 /* Description */
 .hero-description {
-  color: #FFF9EF;
+  color: #FFFAF0; /* Bright warm white */
   font-size: 18px;
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto 24px;
-  opacity: 0.95;
+  opacity: 1;
   font-weight: 400;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55), 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 /* Buttons Row */
@@ -808,9 +797,9 @@ h1, h2, h3, h4, .brand, .cursive-font {
 .hero-stats-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  gap: 14px;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 22px;
   border-top: 1px solid rgba(255, 230, 180, 0.25);
 }
 
@@ -818,33 +807,53 @@ h1, h2, h3, h4, .brand, .cursive-font {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
+  gap: 5px;
+  padding: 12px 10px;
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 16px;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stat-item:hover {
+  background: rgba(255, 244, 224, 0.16);
+  border-color: rgba(212, 175, 55, 0.55);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
 }
 
 .stat-icon {
-  font-size: 20px;
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 2px;
 }
 
 .stat-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2px;
 }
 
 .hero-stats-row .stat-number,
 .hero-stats-row .stat-text {
   font-size: 20px;
   font-weight: 800;
-  color: #D4AF37;
+  color: #FFE082;
   font-family: 'Poppins', sans-serif;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65), 0 2px 8px rgba(0, 0, 0, 0.5);
+  line-height: 1.25;
 }
 
 .hero-stats-row .stat-label {
   font-size: 12px;
-  color: #D4AF37;
-  font-weight: 500;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  color: #FFF9EF;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65), 0 1px 6px rgba(0, 0, 0, 0.5);
+  white-space: nowrap;
 }
 
 /* Scroll Indicator (Bottom Center) */
@@ -1987,6 +1996,13 @@ h1, h2, h3, h4, .brand, .cursive-font {
 
 /* Responsiveness adjustments */
 @media (max-width: 990px) {
+  .decor-bell-topleft,
+  .decor-bell-topright {
+    top: 65px;
+    width: 40px;
+  }
+  .decor-bell-topleft { left: 2.5%; }
+  .decor-bell-topright { right: 2.5%; }
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
@@ -2015,6 +2031,13 @@ h1, h2, h3, h4, .brand, .cursive-font {
 }
 
 @media (max-width: 600px) {
+  .decor-bell-topleft,
+  .decor-bell-topright {
+    top: 50px;
+    width: 32px;
+  }
+  .decor-bell-topleft { left: 10px; }
+  .decor-bell-topright { right: 10px; }
   .topbar-inner {
     flex-direction: column;
     gap: 1rem;
@@ -2026,14 +2049,30 @@ h1, h2, h3, h4, .brand, .cursive-font {
     gap: 1.2rem;
   }
   .hero-glass-card {
-    padding: 1.8rem;
+    padding: 1.8rem 1.2rem 1.4rem;
   }
   .hero-main-title {
     font-size: 2.2rem;
   }
   .hero-stats-row {
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 18px;
+    gap: 10px;
+    padding-top: 16px;
+  }
+  .hero-stats-row .stat-item {
+    padding: 8px 6px;
+    border-radius: 12px;
+  }
+  .hero-stats-row .stat-icon {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .hero-stats-row .stat-number,
+  .hero-stats-row .stat-text {
+    font-size: 17px;
+  }
+  .hero-stats-row .stat-label {
+    font-size: 11px;
   }
   .hero-scroll-indicator {
     display: none;
@@ -2238,7 +2277,7 @@ h1, h2, h3, h4, .brand, .cursive-font {
   padding: 2.5rem 2.8rem;
   box-shadow: 0 16px 45px rgba(101, 21, 21, 0.06), 0 0 25px rgba(212, 175, 55, 0.15);
   max-width: 1140px;
-  margin: 2rem auto 4rem;
+  margin: 2rem auto 2.5rem;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   z-index: 2;
@@ -2362,166 +2401,47 @@ h1, h2, h3, h4, .brand, .cursive-font {
   color: #FFFFFF !important;
 }
 
-/* Developers Section Segment */
-.developers-section-wrapper {
-  margin-top: 3.5rem;
+/* Trust Core Purpose & Resolutions Segment (Sankalp Cards) */
+.sankalp-section-wrapper {
+  margin-top: 1.5rem;
   position: relative;
   z-index: 2;
 }
 
-.dev-heading-wrapper {
+/* The segment now ends at the diya divider, so no trailing gap below it. */
+.sankalp-heading-wrapper {
   text-align: center;
-  margin-bottom: 2.2rem;
+  margin-bottom: 0;
 }
 
-.dev-section-title {
+.sankalp-section-title {
   font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
-  font-size: 1.35rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
   font-weight: 700;
   color: #651515;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
 }
 
-.dev-title-divider {
+.sankalp-title-divider {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin: 0.4rem auto 0;
+  /* small balanced gap below the diya so it closes the section cleanly */
+  margin: 0.5rem auto 1rem;
 }
 
-.dev-title-divider .dev-line {
-  width: 70px;
+.sankalp-title-divider .sankalp-line {
+  width: 90px;
   height: 1.5px;
   background: linear-gradient(90deg, transparent, #D4AF37 50%, transparent);
 }
 
-.dev-title-divider .dev-diya-icon {
-  width: 22px;
-  height: 22px;
+.sankalp-title-divider .sankalp-diya-icon {
+  width: 24px;
+  height: 24px;
   filter: drop-shadow(0 2px 4px rgba(232, 122, 31, 0.5));
-}
-
-/* Developers Grid & Cards */
-.dev-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.2rem;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.dev-card-premium {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  background: linear-gradient(145deg, #FFFDF8 0%, #FFF8E7 60%, #FFF3D6 100%);
-  border: 1.5px solid rgba(212, 175, 55, 0.45);
-  border-radius: 22px;
-  padding: 1.8rem 2rem;
-  box-shadow: 0 12px 35px rgba(101, 21, 21, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.dev-card-premium::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, #651515, #D4AF37);
-  border-radius: 4px 0 0 4px;
-}
-
-.dev-card-premium:hover {
-  transform: translateY(-6px);
-  border-color: #D4AF37;
-  background: linear-gradient(145deg, #FFFFFF 0%, #FFF5DC 100%);
-  box-shadow: 0 20px 48px rgba(101, 21, 21, 0.12), 0 0 25px rgba(212, 175, 55, 0.28);
-}
-
-.dev-img-wrapper {
-  width: 82px;
-  height: 82px;
-  border-radius: 50%;
-  padding: 3px;
-  background: linear-gradient(135deg, #D4AF37, #E87A1F);
-  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.35);
-  flex-shrink: 0;
-  overflow: hidden;
-}
-
-.dev-avatar {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.dev-card-premium:hover .dev-avatar {
-  transform: scale(1.08);
-}
-
-.dev-info-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.dev-name {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #651515;
-  margin: 0 0 4px 0;
-  font-family: var(--font-sans);
-  letter-spacing: -0.2px;
-}
-
-.dev-role {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #C29B27;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 6px;
-}
-
-.dev-tech {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: #5C5C5C;
-  margin: 0 0 12px 0;
-  line-height: 1.4;
-}
-
-.dev-email-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px;
-  border-radius: 999px;
-  border: 1.5px solid #D4AF37;
-  background: transparent;
-  color: #651515;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.dev-email-btn:hover,
-.dev-email-btn:focus-visible {
-  background: #651515;
-  color: #FFF9EF;
-  border-color: #651515;
-  box-shadow: 0 4px 12px rgba(101, 21, 21, 0.25);
 }
 
 /* Contact Responsive Breakpoints */
@@ -2537,33 +2457,17 @@ h1, h2, h3, h4, .brand, .cursive-font {
   }
   .social-contact-container {
     padding: 1.8rem 1.2rem;
-    margin: 1.5rem auto 3rem;
+    margin: 1.5rem auto 2rem;
   }
   .social-cards-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-  }
-  .dev-cards-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .dev-card-premium {
-    padding: 1.5rem;
   }
 }
 
 @media (max-width: 540px) {
   .social-cards-grid {
     grid-template-columns: 1fr;
-  }
-  .dev-card-premium {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-  .dev-info-content {
-    align-items: center;
-    text-align: center;
   }
 }
 
@@ -2791,7 +2695,13 @@ h1, h2, h3, h4, .brand, .cursive-font {
   box-shadow: 0 20px 50px rgba(212, 175, 55, 0.18);
   padding: 28px 36px; /* Reduced vertical height by 15-20px */
   display: grid;
-  grid-template-columns: 44% 56%;
+  /* 44/56 split expressed in fr, not %. Percentages resolve against the full
+     content box, so "44% + 56%" plus the 36px gap overflowed the card by
+     exactly one gap and pushed the right column (and its info boxes) past the
+     right padding. fr units divide the space that is left after the gap, so
+     both columns stay inside the card with equal 36px insets on either side.
+     minmax(0, …) stops long unbroken text from re-inflating a column. */
+  grid-template-columns: minmax(0, 44fr) minmax(0, 56fr);
   gap: 36px;
   align-items: center;
   position: relative;
@@ -2831,12 +2741,12 @@ h1, h2, h3, h4, .brand, .cursive-font {
   background: #7A1F2A;
   color: #FFFDF7;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 1rem; /* slightly larger & more prominent */
   padding: 5px 18px;
   border-radius: 50px;
   border: 1px solid rgba(212, 175, 55, 0.6);
   box-shadow: 0 4px 12px rgba(122, 31, 42, 0.2);
-  letter-spacing: 0.5px;
+  letter-spacing: 0.7px;
 }
 
 /* Left Side Image & Premium Golden Frame */
@@ -2905,6 +2815,7 @@ h1, h2, h3, h4, .brand, .cursive-font {
 
 /* Right Side Content */
 .ultra-card-right {
+  min-width: 0; /* keeps the column inside its grid track */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2912,21 +2823,56 @@ h1, h2, h3, h4, .brand, .cursive-font {
   will-change: transform, opacity;
 }
 
+/* Badge sits a little lower and is centred so it reads as the top line of the
+   heading group, with a small balanced gap down to the heading itself. */
 .ultra-badge-wrapper {
-  margin-bottom: 8px;
+  text-align: center;
+  margin-top: 14px;
+  margin-bottom: 12px;
 }
 
 .ultra-badge {
-  display: inline-block;
+  /* inline-flex + equal gap keeps "पधारो" symmetrically placed between the
+     two Swastik symbols; stays inline so the badge sits exactly where it did. */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  line-height: 1.3;
   background: #7A1F2A; /* Maroon capsule */
   color: #FFFDF7;
   font-weight: 700;
   font-size: 0.92rem;
-  padding: 5px 20px;
+  /* wider, but vertical padding held so the capsule does not get taller */
+  padding: 7px 36px;
   border-radius: 50px;
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  box-shadow: 0 4px 15px rgba(122, 31, 42, 0.2);
+  /* refined warm-gold edge with a soft outer glow and a fine inner highlight */
+  border: 1px solid rgba(212, 175, 55, 0.75);
+  box-shadow:
+    0 4px 14px rgba(122, 31, 42, 0.22),
+    0 0 18px rgba(212, 175, 55, 0.22),
+    inset 0 1px 0 rgba(255, 233, 175, 0.18);
   letter-spacing: 0.8px;
+}
+
+/* Swastik symbols: rich devotional golden-yellow, bright enough to read
+   against the maroon capsule behind them. */
+.ultra-badge .badge-swastik {
+  color: #FFC72C;
+  font-size: 1.15rem;
+  letter-spacing: 0;
+  flex: none;
+}
+
+/* "पधारो": larger and bolder, in the badge's existing gold/cream tone. */
+.ultra-badge .badge-text {
+  color: #FFFDF7;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  /* letter-spacing adds a trailing gap after the last glyph; cancel it so the
+     word is optically centred between the two symbols rather than 0.8px left. */
+  margin-right: -0.8px;
 }
 
 .ultra-event-heading {
@@ -2935,6 +2881,8 @@ h1, h2, h3, h4, .brand, .cursive-font {
   font-weight: 800;
   color: #7A1F2A;
   line-height: 1.22;
+  /* centred so the badge and heading read as one cohesive heading group */
+  text-align: center;
   margin-bottom: 10px;
   text-shadow: 0 2px 8px rgba(122, 31, 42, 0.06);
   animation: ultraFadeDown 0.8s ease-out 0.2s backwards;
@@ -2969,15 +2917,22 @@ h1, h2, h3, h4, .brand, .cursive-font {
   animation: ultraFadeUp 0.8s ease-out 0.3s backwards;
 }
 
-/* 2x2 Event Information Cards Grid */
+/* 2x2 Event Information Cards Grid.
+   Two equal minmax(0, 1fr) columns with a matching 14px row/column gap: the
+   four boxes are identical in width, evenly spaced, and flush with the right
+   column's edges, so their outer indentation matches the card padding on both
+   sides. box-sizing keeps the border inside that measured width. */
 .event-info-grid-2x2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 14px;
   margin-bottom: 16px;
+  width: 100%;
 }
 
 .event-grid-card {
+  box-sizing: border-box;
+  min-width: 0;
   background: #FFFFFF;
   border: 1.5px solid rgba(212, 175, 55, 0.4);
   border-radius: 16px;
@@ -3028,9 +2983,26 @@ h1, h2, h3, h4, .brand, .cursive-font {
   font-size: 1.2rem;
 }
 
+/* Modern location-pin (Font Awesome) in the venue card: it is a glyph rather
+   than a colour emoji, so it needs an explicit colour to read on the maroon box. */
+.venue-card .event-card-icon.fa-location-dot {
+  color: #FFFDF7;
+}
+
+/* Organizer (4th) icon rendered white for better visibility on the maroon box.
+   Transparent fill + zero-offset text-shadow recolours the colour emoji. */
+.event-info-grid-2x2 .event-grid-card:nth-child(4) .event-card-icon {
+  color: transparent;
+  text-shadow: 0 0 0 #FFFFFF;
+}
+
 .event-card-details {
   display: flex;
   flex-direction: column;
+  /* lets the text column shrink inside the flex row and wrap instead of
+     pushing the box wider than its grid track */
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .event-card-title {
@@ -3731,6 +3703,17 @@ h1, h2, h3, h4, .brand, .cursive-font {
   font-size: 1.25rem;
 }
 
+/* Bright golden icons for the Vision (1st) and Values (3rd) pillars only.
+   Transparent fill + a zero-offset, zero-blur text-shadow re-renders the
+   colour emoji as a solid gold glyph. Colour-only: the icon box, sizes,
+   spacing and layout are all untouched. Mission (2nd) and Services (4th)
+   keep their original emoji colours. */
+.about-pillars-grid .about-pillar-card:nth-child(1) .pillar-icon,
+.about-pillars-grid .about-pillar-card:nth-child(3) .pillar-icon {
+  color: transparent;
+  text-shadow: 0 0 0 #FFD700;
+}
+
 .pillar-info {
   display: flex;
   flex-direction: column;
@@ -4217,23 +4200,6 @@ h1, h2, h3, h4, .brand, .cursive-font {
   justify-content: center;
 }
 
-/* 4. Refined Event Pill Badge at Top-Right Corner */
-.gallery-card-badge {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: #7A1F2A; /* Maroon background */
-  border: 1.5px solid #D4AF37; /* Golden border */
-  color: #FFFDF7; /* White text */
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 18px; /* Compact rounded pill */
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-  z-index: 5;
-  letter-spacing: 0.3px;
-}
-
 /* 1, 2, 3. Complete Natural Image Display (Same Height 285px, Auto Aspect Width, 0% Padding, 0% Crop) */
 .gallery-card-img {
   height: 285px;
@@ -4245,7 +4211,7 @@ h1, h2, h3, h4, .brand, .cursive-font {
   display: block;
 }
 
-/* 5. Hover Effects (Scale 1.05, Upward 6px, Golden Glow, Dark Overlay) */
+/* 5. Hover Effects (Scale 1.05, Upward 6px, Golden Glow) */
 .gallery-card:hover .gallery-card-inner {
   transform: translateY(-6px) scale(1.05); /* 6px upward + 1.05 scale */
   border-color: #F5D77F;
@@ -4254,51 +4220,6 @@ h1, h2, h3, h4, .brand, .cursive-font {
 
 .gallery-card:hover .gallery-card-img {
   transform: scale(1.04);
-}
-
-.gallery-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 30%, rgba(20, 5, 8, 0.92) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 20px;
-  opacity: 0;
-  transform: translateY(15px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-  pointer-events: none;
-  z-index: 4;
-}
-
-.gallery-card:hover .gallery-card-overlay {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.gallery-card-title {
-  font-family: 'Noto Sans Devanagari', 'Hind', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #FFFDF7;
-  margin-bottom: 3px;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
-
-.gallery-card-date {
-  display: inline-block;
-  color: #F5D77F; /* Golden date */
-  font-size: 0.82rem;
-  font-weight: 600;
-  margin-bottom: 4px;
-}
-
-.gallery-card-desc {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #E2D0BE;
-  line-height: 1.35;
-  margin: 0;
 }
 
 
@@ -4474,55 +4395,10 @@ h1, h2, h3, h4, .brand, .cursive-font {
   z-index: 12;
 }
 
-.gallery-modal-info-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-}
-
-/* 5. Image Hierarchy: 2. Event Title (Bold 700, 1.28rem) */
-.gallery-modal-title {
-  font-family: 'Noto Sans Devanagari', 'Hind', sans-serif;
-  font-size: 1.28rem;
-  font-weight: 700;
-  color: #FFFDF7;
-  margin: 0;
-  letter-spacing: 0.3px;
-}
-
-/* 5. Image Hierarchy: 4. Date Badge */
-.gallery-date-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #7A1F2A; /* Maroon background */
-  border: 1px solid #D4AF37; /* Gold border */
-  color: #FFFDF7; /* White text */
-  padding: 3px 12px;
-  border-radius: 20px; /* Rounded pill */
-  font-size: 0.82rem;
-  font-weight: 600;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-  white-space: nowrap;
-}
-
-/* 5. Image Hierarchy: 3. Description */
-.gallery-modal-caption {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: #D3C2B0;
-  margin: 2px 0 0 0;
-  line-height: 1.4;
-}
-
 .gallery-modal-info-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 6px;
-  padding-top: 8px;
-  border-top: 1px dashed rgba(212, 175, 55, 0.2);
 }
 
 /* 5. Image Hierarchy: 5. Counter ("7 / 8") */
@@ -4590,8 +4466,6 @@ h1, h2, h3, h4, .brand, .cursive-font {
   height: 100%;
   object-fit: cover;
 }
-  object-fit: cover;
-}
 
 /* 13. Responsive Breakpoints */
 @media (max-width: 992px) {
@@ -4630,11 +4504,6 @@ h1, h2, h3, h4, .brand, .cursive-font {
   .gallery-modal-info-card {
     width: 100%;
     padding: 8px 12px;
-  }
-  .gallery-modal-info-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
   }
   .gallery-keyboard-hint {
     font-size: 0.68rem;
@@ -5230,5 +5099,649 @@ h1, h2, h3, h4, .brand, .cursive-font {
   }
   100% {
     background-position: 200% center;
+  }
+}
+
+/* ==========================================================================
+   SEVA ACTIVITIES SECTION (हमारी सेवाएँ)
+   Compact 3-card layout on the homepage + archive grid on seva.html.
+   Palette matches the existing devotional system: warm cream ground,
+   temple maroon (#7A1F2A) headings, temple gold (#D4AF37) accents.
+   ========================================================================== */
+.seva-section {
+  position: relative;
+  background: #FFF8F0; /* Warm cream, matching the gallery section */
+  padding: 54px 0 60px 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.seva-ambient-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, rgba(255, 248, 240, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.seva-watermark {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.seva-watermark img {
+  width: 100%;
+  height: 100%;
+  filter: sepia(1) saturate(3) hue-rotate(330deg);
+}
+
+.seva-watermark-left { top: -30px; left: -30px; transform: rotate(-15deg); }
+.seva-watermark-right { bottom: -30px; right: -30px; transform: rotate(15deg); }
+
+.seva-container {
+  position: relative;
+  z-index: 2;
+  width: 84%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ---------- Section header (mirrors the gallery header rhythm) ---------- */
+.seva-header {
+  text-align: center;
+  margin-bottom: 34px;
+  animation: ultraFadeDown 0.8s ease-out backwards;
+}
+
+.seva-header-title {
+  font-family: 'Noto Sans Devanagari', 'Hind', sans-serif;
+  font-size: clamp(2.2rem, 3.8vw, 44px);
+  font-weight: 800;
+  color: #7A1F2A;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  text-shadow: 0 2px 8px rgba(122, 31, 42, 0.06);
+}
+
+.seva-header-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.seva-header-divider .seva-line {
+  height: 1.5px;
+  width: 120px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+.seva-diya-ornament {
+  font-size: 1.4rem;
+  filter: drop-shadow(0 2px 5px rgba(212, 175, 55, 0.5));
+}
+
+.seva-header-subtitle {
+  color: #7D5230;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-weight: 500;
+  max-width: 760px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* ---------- Card grid: 3 across, equal columns, no overflow ---------- */
+.seva-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.seva-card {
+  box-sizing: border-box;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(212, 175, 55, 0.4);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.1);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+  will-change: transform;
+}
+
+/* Gentle lift on hover — no blur and no overlay is ever placed on the photo. */
+.seva-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.75);
+  box-shadow: 0 16px 34px rgba(212, 175, 55, 0.24);
+}
+
+/* Entry animation only in the archive grid: carousel cards get reordered in
+   the DOM, and re-inserting a node can restart its animation and flicker. */
+.seva-grid .seva-card {
+  animation: ultraFadeUp 0.6s ease-out var(--seva-delay, 0.1s) backwards;
+}
+
+/* ---------- Image-focused card media (one seva photo per card) ----------
+   IMPORTANT — these photos are themselves multi-photo collages (group shots,
+   banners and portrait 9:16 phone pictures, ratios 0.563 → 1.091) with faces
+   running right up to all four edges. `object-fit: cover` would crop them and
+   cut heads off, so the media box uses `contain`: the ENTIRE frame is always
+   visible and nothing is ever trimmed. The 4/5 box is a middle ground between
+   the tall 9:16 shots and the near-square ones, so the letterbox margins stay
+   small; they are painted the same warm cream as the section, which reads as
+   a soft mat around the photo rather than empty space. */
+.seva-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: linear-gradient(160deg, #FFFDF8 0%, #FFF4E2 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.28);
+  flex: none;
+}
+
+.seva-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* never crop — keeps every face in frame */
+  object-position: center;
+  display: block;
+}
+
+/* Fallback for browsers without aspect-ratio support. */
+@supports not (aspect-ratio: 4 / 5) {
+  .seva-card-media {
+    height: 340px;
+  }
+}
+
+/* NOTE: no zoom-on-hover for the image. Scaling it inside an overflow-hidden
+   box would push the edges out of view — i.e. crop the very faces we are
+   protecting. The card lift below is the hover feedback instead. */
+
+/* ---------- Card body ---------- */
+.seva-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  padding: 16px 18px 18px;
+}
+
+.seva-card-title {
+  font-family: 'Noto Sans Devanagari', 'Hind', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #7A1F2A;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  overflow-wrap: break-word;
+}
+
+.seva-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.28);
+}
+
+.seva-meta-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #4A2E1B;
+  line-height: 1.45;
+  overflow-wrap: break-word;
+}
+
+.seva-meta-icon {
+  flex: none;
+  margin-top: 3px;
+  font-size: 0.85rem;
+  color: #B8860B;
+}
+
+.seva-card-desc {
+  color: #5C4126;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+/* ==========================================================================
+   "हाल की सेवा गतिविधियाँ" — horizontal carousel holding the 3 latest services
+   ========================================================================== */
+.seva-recent-block {
+  width: 100%;
+  animation: ultraFadeUp 0.7s ease-out 0.2s backwards;
+}
+
+.seva-recent-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.seva-recent-title {
+  font-family: 'Noto Sans Devanagari', 'Hind', sans-serif;
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 700;
+  color: #7A1F2A;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Shell is the positioning context for the two arrows, which sit at the far
+   left and far right ends of the picture row, vertically centred on it. */
+.seva-carousel-shell {
+  position: relative;
+  width: 100%;
+}
+
+.seva-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #7A1F2A;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1.5px solid rgba(212, 175, 55, 0.65);
+  box-shadow: 0 6px 18px rgba(122, 31, 42, 0.22);
+  transition: background 0.3s ease, color 0.3s ease,
+              box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.seva-nav-prev { left: 10px; }
+.seva-nav-next { right: 10px; }
+
+.seva-nav-btn:hover {
+  background: #7A1F2A;
+  color: #FFFDF7;
+  border-color: rgba(212, 175, 55, 0.95);
+  box-shadow: 0 10px 24px rgba(122, 31, 42, 0.34);
+}
+
+.seva-nav-btn:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+/* Viewport clips the track; the track itself slides. */
+.seva-carousel-viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 6px 0 10px; /* room for the hover lift and card shadow */
+}
+
+.seva-carousel-track {
+  display: flex;
+  column-gap: 24px;
+  width: 100%;
+  will-change: transform;
+}
+
+/* 3 cards visible on desktop; the gap is subtracted so nothing overflows. */
+.seva-carousel-track .seva-card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  max-width: calc((100% - 48px) / 3);
+}
+
+/* ---------- Impact / statistics row ---------- */
+.seva-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(212, 175, 55, 0.35);
+  animation: ultraFadeUp 0.7s ease-out 0.35s backwards;
+}
+
+.seva-stat-item {
+  box-sizing: border-box;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 16px 12px;
+  text-align: center;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(212, 175, 55, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.1);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.seva-stat-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.75);
+  box-shadow: 0 12px 26px rgba(212, 175, 55, 0.22);
+}
+
+.seva-stat-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.seva-stat-value {
+  font-family: 'Noto Sans Devanagari', 'Hind', sans-serif;
+  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+  font-weight: 800;
+  color: #7A1F2A;
+  line-height: 1.2;
+}
+
+.seva-stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7D5230;
+  line-height: 1.35;
+}
+
+/* ---------- Archive call-to-action ---------- */
+.seva-cta-wrapper {
+  text-align: center;
+  margin-top: 34px;
+  animation: ultraFadeUp 0.7s ease-out 0.5s backwards;
+}
+
+.seva-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Secondary "join the seva" button — maroon counterpart to the gold one. */
+.seva-join-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 34px;
+  border-radius: 999px;
+  font-family: 'Noto Sans Devanagari', 'Hind', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #7A1F2A;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(212, 175, 55, 0.7);
+  box-shadow: 0 6px 18px rgba(122, 31, 42, 0.12);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), background 0.35s ease,
+              color 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.seva-join-btn:hover {
+  transform: scale(1.05);
+  background: #7A1F2A;
+  color: #FFFDF7;
+  border-color: #D4AF37;
+  box-shadow: 0 12px 30px rgba(122, 31, 42, 0.4), 0 0 16px rgba(212, 175, 55, 0.3);
+}
+
+.seva-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 38px;
+  border-radius: 999px;
+  font-family: 'Noto Sans Devanagari', 'Hind', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  color: #4A0A0A;
+  background: linear-gradient(135deg, #D4AF37 0%, #F5C242 50%, #B8860B 100%);
+  border: 1px solid #FFE082;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s ease;
+}
+
+.seva-cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.75), 0 0 20px rgba(232, 122, 31, 0.5);
+}
+
+.seva-cta-arrow {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.seva-cta-btn:hover .seva-cta-arrow {
+  transform: translateX(6px);
+}
+
+.seva-cta-note {
+  margin-top: 12px;
+  color: #7D5230;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   SEVA ARCHIVE PAGE (seva.html)
+   Reuses every card style above; only the page shell differs.
+   ========================================================================== */
+.seva-archive-page {
+  position: relative;
+  padding: 40px 0 70px 0;
+}
+
+.seva-archive-page .seva-grid {
+  row-gap: 30px;
+}
+
+.seva-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 26px;
+  padding: 9px 22px;
+  border-radius: 999px;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(212, 175, 55, 0.5);
+  color: #7A1F2A;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.seva-back-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 175, 55, 0.85);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+}
+
+.seva-archive-logo {
+  width: 68px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #D4AF37;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  margin: 0 auto 14px;
+}
+
+.seva-archive-count {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 5px 20px;
+  border-radius: 50px;
+  background: #7A1F2A;
+  color: #FFFDF7;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 1px solid rgba(212, 175, 55, 0.6);
+  box-shadow: 0 4px 12px rgba(122, 31, 42, 0.2);
+}
+
+/* ---------- Responsive ---------- */
+/* Tablet: 2 cards visible in the carousel, 2 columns in the archive grid. */
+@media (max-width: 992px) {
+  .seva-container {
+    width: 92%;
+  }
+
+  .seva-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .seva-carousel-track {
+    column-gap: 20px;
+  }
+
+  .seva-carousel-track .seva-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    max-width: calc((100% - 20px) / 2);
+  }
+
+  .seva-stats-row {
+    gap: 14px;
+  }
+
+  .seva-stat-item {
+    padding: 14px 10px;
+  }
+}
+
+/* Mobile: 1 card visible in the carousel, single-column archive grid. */
+@media (max-width: 600px) {
+  .seva-section {
+    padding: 44px 0 48px 0;
+  }
+
+  .seva-container {
+    width: 95%;
+  }
+
+  .seva-header {
+    margin-bottom: 26px;
+  }
+
+  .seva-header-divider .seva-line {
+    width: 60px;
+  }
+
+  .seva-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .seva-recent-head {
+    text-align: center;
+  }
+
+  .seva-carousel-track {
+    column-gap: 16px;
+  }
+
+  .seva-carousel-track .seva-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .seva-card-body {
+    padding: 14px 15px 16px;
+  }
+
+  /* Arrows tuck to the very edges of the single visible picture. */
+  .seva-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .seva-nav-prev { left: 6px; }
+  .seva-nav-next { right: 6px; }
+
+  /* 2 x 2 statistics so the tiles stay readable on a phone. */
+  .seva-stats-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 26px;
+    padding-top: 22px;
+  }
+
+  .seva-stat-item {
+    padding: 13px 8px;
+    border-radius: 14px;
+  }
+
+  .seva-stat-icon {
+    font-size: 1.3rem;
+  }
+
+  .seva-stat-label {
+    font-size: 0.78rem;
+  }
+
+  .seva-cta-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .seva-cta-btn,
+  .seva-join-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 24px;
+    font-size: 1rem;
+  }
+
+  .seva-watermark {
+    display: none;
+  }
+}
+
+/* Respect reduced-motion: no sliding animation, no hover lift. */
+@media (prefers-reduced-motion: reduce) {
+  .seva-carousel-track {
+    transition: none !important;
+  }
+
+  .seva-card,
+  .seva-card-media img {
+    transition: none;
   }
 }

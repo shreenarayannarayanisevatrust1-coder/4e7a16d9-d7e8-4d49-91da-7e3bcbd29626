@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>सेवा गतिविधियाँ - श्री नारायण नारायणी सेवा ट्रस्ट</title>
+    <meta name="description" content="श्री नारायण नारायणी सेवा ट्रस्ट की समस्त सेवा गतिविधियों का संपूर्ण संग्रह" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Hind:wght@400;500;600;700&family=Marcellus&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=6" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" type="image/jpeg" href="images/logo.jpeg" />
+  </head>
+  <body>
+    <main>
+      <section class="seva-section seva-archive-page">
+        <!-- Ambient Golden Glow -->
+        <div class="seva-ambient-glow"></div>
+
+        <!-- Corner Watermark Patterns -->
+        <div class="seva-watermark seva-watermark-left">
+          <img src="images/mandala.svg" alt="" />
+        </div>
+        <div class="seva-watermark seva-watermark-right">
+          <img src="images/lotus.svg" alt="" />
+        </div>
+
+        <div class="seva-container">
+          <a class="seva-back-link" href="index.html#seva">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            <span>मुख्य पृष्ठ पर वापस जाएं</span>
+          </a>
+
+          <!-- Page Heading -->
+          <header class="seva-header">
+            <img src="images/logo.jpeg" alt="श्री नारायण नारायणी सेवा ट्रस्ट" class="seva-archive-logo" />
+            <h2 class="seva-header-title">🪔 सेवा गतिविधियाँ 🪔</h2>
+            <div class="seva-header-divider">
+              <span class="seva-line"></span>
+              <span class="seva-diya-ornament">🌸</span>
+              <span class="seva-line"></span>
+            </div>
+            <p class="seva-header-subtitle">
+              सेवा से संस्कार • संस्कार से समाज
+            </p>
+            <span class="seva-archive-count" id="sevaArchiveCount"></span>
+          </header>
+
+          <!-- All Seva Activities, in the project's seva1 → seva10 order -->
+          <div class="seva-grid" id="sevaArchiveGrid">
+            <!-- Populated by renderSevaArchive('sevaArchiveGrid') -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Seva Activities: shared data + renderer (same file the homepage uses) -->
+    <script src="seva-data.js"></script>
+    <script>
+      // The archive lists every service in the project's seva1 → seva10 order.
+      renderSevaArchive('sevaArchiveGrid');
+
+      (function showArchiveCount() {
+        var label = document.getElementById('sevaArchiveCount');
+        if (!label) return;
+        var total = getSevaActivities().length;
+        label.textContent = 'कुल ' + total + ' सेवा गतिविधियाँ';
+      })();
+    </script>
+  </body>
+</html>

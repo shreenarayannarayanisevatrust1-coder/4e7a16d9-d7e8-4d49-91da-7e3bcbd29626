@@ -73,10 +73,10 @@ window.SEVA_ACTIVITIES = [
   },
   {
     image: "images/carousel/Services/seva8.jpeg",
-    title: "गौशाला सेवा",
+    title: "मासिक सामाजिक सेवा",
     location: "",
     dateLabel: "14/01/2026",
-    desc: "सदस्यों द्वारा गौशाला सेवा एवं भ्रमण।"
+    desc: "सदस्यों द्वारा मासिक सामाजिक सेवा।"
   },
   {
     image: "images/carousel/Services/seva9.jpeg",
@@ -87,10 +87,10 @@ window.SEVA_ACTIVITIES = [
   },
   {
     image: "images/carousel/Services/seva10.jpeg",
-    title: "मासिक सामाजिक सेवा",
+    title: "गौशाला सेवा",
     location: "",
     dateLabel: "10/05/2026",
-    desc: "ट्रस्ट के सदस्यों द्वारा सामाजिक सेवा गतिविधि।"
+    desc: "ट्रस्ट के सदस्यों द्वारा गौशाला सेवा गतिविधि।"
   }
 ];
 
